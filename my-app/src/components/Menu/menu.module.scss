@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: $_black-translucent;
+
+  &.active {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    .wrap {
+      right: 0;
+      &.active {
+        background: $_black;
+      }
+    }
+  }
+  .wrap {
+    position: fixed;
+    transition: 0.5s;
+    top: 0;
+    right: -150%;
+    z-index: 1;
+    height: 100vh;
+    margin-left: auto;
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: 360px) {
+      width: 100vw;
+    }
+    background: $_white;
+    padding: 80px 15px 30px 60px;
+    button {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      i {
+        font-size: $s_icon-close;
+        color: $_grey;
+      }
+    }
+  }
+}

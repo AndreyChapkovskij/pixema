@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.sidebar {
+  min-width: 274px;
+  @media (max-width: 1820px) {
+    min-width: 259px;
+  }
+  @media (max-width: 1280px) {
+    display: none;
+  }
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: flex-start;
+  margin: 0 15px;
+}

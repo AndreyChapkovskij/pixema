@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  padding: 15px 0;
+  margin-top: auto;
+  span {
+    font-size: $s_span;
+    font-weight: 500;
+    line-height: 24px;
+    color: $_light-grey;
+    text-transform: capitalize;
+  }
+}

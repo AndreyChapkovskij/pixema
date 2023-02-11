@@ -1,0 +1,33 @@
+@import '../../../styles/variables.scss';
+
+.movie {
+  cursor: pointer;
+  width: $w_card_main;
+  margin: 0 15px 40px;
+  @media (max-width: 1280px) {
+    width: $w_card_second;
+  }
+  @media (max-width: 768px) {
+    width: $w_card_main;
+  }
+  @media (max-width: 622px) {
+    width: $w_card_second;
+  }
+  @media (max-width: 506px) {
+    width: $w_card_main;
+  }
+  @media (max-width: 326px) {
+    width: $w_card_second;
+  }
+  .title {
+    color: $_light-black;
+
+    font-weight: 700;
+    font-size: $s_title_third;
+    line-height: 24px;
+    text-transform: capitalize;
+  }
+  .title.active {
+    color: $_white;
+  }
+}

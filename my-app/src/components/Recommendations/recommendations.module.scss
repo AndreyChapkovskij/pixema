@@ -1,0 +1,91 @@
+@import '../../styles/variables.scss';
+
+.recommendations {
+  .recommendations__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    h3 {
+      font-weight: 600;
+      font-size: $s_title_second;
+      line-height: 36px;
+
+      color: $_black;
+    }
+    .arrows {
+      color: $_black;
+      font-size: $s_icon-arrows;
+      font-weight: 500;
+      i {
+        cursor: pointer;
+      }
+      i:first-child {
+        margin-right: 22px;
+      }
+    }
+  }
+  .recommendations__movies {
+    display: flex;
+    justify-content: center;
+    .recommendations__movies_wrap {
+      max-width: 1154px;
+      @media (max-width: 1820px) {
+        max-width: 565px;
+      }
+      @media (max-width: 1280px) {
+        max-width: 684px;
+      }
+      @media (max-width: 990px) {
+        max-width: 446px;
+      }
+      @media (max-width: 768px) {
+        max-width: 560px;
+      }
+      @media (max-width: 622px) {
+        max-width: 430px;
+      }
+      @media (max-width: 506px) {
+        max-width: 266px;
+      }
+      @media (max-width: 326px) {
+        max-width: 208px;
+      }
+      .movie {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        .title {
+          color: $_light-black;
+          font-weight: 700;
+          font-size: $s_title_third;
+          line-height: 24px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  .recommendations__nav {
+    h3 {
+      color: $_white;
+    }
+    .arrows {
+      color: $_white;
+      i:first-child {
+      }
+    }
+  }
+  .recommendations__movies {
+    .recommendations__movies_wrap {
+      .movie {
+        .title {
+          color: $_white;
+        }
+      }
+    }
+  }
+}

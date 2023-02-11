@@ -1,0 +1,111 @@
+@import '../../styles/variables.scss';
+
+.movieList {
+  flex-grow: 1;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    background: $_dim-grey;
+    border-radius: 40px;
+  }
+  & > div:hover {
+    transform: scale(1.05);
+  }
+  span {
+    font-weight: 500;
+    font-size: $s_span;
+    color: $_white;
+  }
+  .spinner {
+    margin-left: 10px;
+    animation: rotate 2s linear infinite;
+    width: 16px;
+    height: 16px;
+
+    & .path {
+      stroke: $_slate-blue;
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+}
+
+.empty {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  @media (max-width: 460px) {
+    height: 50vh;
+  }
+
+  div {
+    max-width: 350px;
+    max-height: 350px;
+    margin-bottom: 25px;
+    @media (max-width: 460px) {
+      margin-bottom: 15px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  span {
+    color: $_grey;
+    font-weight: 600;
+    font-size: $s_not-found;
+  }
+}
+
+.searchTitle {
+  margin: 0 15px 20px;
+  &.active {
+    color: $_white;
+  }
+}

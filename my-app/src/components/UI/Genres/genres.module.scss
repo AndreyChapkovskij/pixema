@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    color: $_light-grey;
+    position: relative;
+    text-transform: capitalize;
+  }
+  li::after {
+    content: '';
+    margin: 0 8px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: $_light-grey;
+    border-radius: 50%;
+  }
+  li:last-child::after {
+    display: none;
+    margin-right: 0px;
+  }
+}

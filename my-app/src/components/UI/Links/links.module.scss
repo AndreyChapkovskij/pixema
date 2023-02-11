@@ -1,0 +1,32 @@
+@import '../../../styles/variables.scss';
+
+.link {
+  margin-bottom: 40px;
+  &.accountLink {
+    margin-bottom: 20px;
+  }
+  cursor: pointer;
+  i {
+    margin-right: 22px;
+    font-size: $s_icon-navigate;
+  }
+  span {
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 24px;
+    font-size: $s_sidebar_li;
+  }
+  span,
+  i {
+    color: $_grey;
+  }
+  a.active {
+    span,
+    i {
+      color: $_slate-blue;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

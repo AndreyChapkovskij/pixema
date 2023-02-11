@@ -1,0 +1,130 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.login {
+  @include backgroundImage;
+  form {
+    margin: auto 0;
+    width: 574px;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+    @media (max-width: 410px) {
+      margin: auto 15px;
+      width: auto;
+    }
+    padding: 40px;
+    background: $_white;
+    border-radius: 10px;
+    color: $_light-black;
+    z-index: 1;
+    .success {
+      display: block;
+      margin-bottom: 24px;
+      color: $_green;
+    }
+    .err {
+      color: $_red;
+      font-size: $s_span;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 24px;
+    }
+    .err::first-letter {
+      text-transform: uppercase;
+    }
+    h2 {
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: $s_title_second;
+      margin-bottom: 40px;
+    }
+
+    .confirm {
+      margin-bottom: 40px;
+    }
+    div {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        font-size: $s_label;
+        line-height: 24px;
+        margin-bottom: 8px;
+      }
+      input {
+        background: $_white;
+        border: 2px solid $_light-grey;
+        border-radius: 10px;
+        padding: 16px 20px;
+        outline: none;
+        font-weight: 500;
+        font-size: $s_input;
+        color: $_grey;
+        width: 100%;
+      }
+    }
+    .password {
+      margin-bottom: 40px;
+
+      span {
+        display: block;
+        font-size: $s_span;
+        font-weight: 500;
+        line-height: 24px;
+        color: $_grey;
+        cursor: pointer;
+      }
+    }
+    .email {
+      margin-bottom: 24px;
+    }
+    .submit {
+      &.disabled {
+        opacity: 0.5;
+      }
+      margin-bottom: 32px;
+      input[type='submit'] {
+        border: none;
+        background: $_slate-blue;
+        border-radius: 10px;
+        color: $_white;
+        cursor: pointer;
+      }
+      input[disabled] {
+        opacity: 0.5;
+      }
+    }
+
+    .signUp {
+      text-align: center;
+      span {
+        font-weight: 500;
+        font-size: $s_span;
+        line-height: 24px;
+        color: $_grey;
+      }
+      span:last-child {
+        color: $_slate-blue;
+        cursor: pointer;
+        margin-left: 3px;
+        text-transform: capitalize;
+      }
+    }
+  }
+  &.active {
+    form {
+      background: $_light-black;
+      color: $_white;
+      div {
+        input {
+          background: $_dim-grey;
+          border: none;
+        }
+      }
+    }
+  }
+}

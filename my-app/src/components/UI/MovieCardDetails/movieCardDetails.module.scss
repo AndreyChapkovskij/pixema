@@ -1,0 +1,45 @@
+@import '../../../styles/variables.scss';
+
+.movie__card {
+  min-width: $w_card_main;
+  @media (max-width: 1280px) {
+    min-width: $w_card_second;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+  .btns {
+    margin-bottom: 24px;
+    cursor: pointer;
+    border: 2px solid $_light-grey;
+    border-radius: 10px;
+    display: flex;
+    div:first-child {
+      border-right: 2px solid $_light-grey;
+    }
+    div {
+      padding: 19px 0;
+      flex-grow: 1;
+      text-align: center;
+      i {
+        color: $_light-grey;
+        font-size: $s_icon;
+      }
+    }
+    div.added {
+      i {
+        color: $_red;
+      }
+    }
+  }
+}
+
+.movie__card.active {
+  .btns {
+    background: $_dim-grey;
+    border: none;
+    div:first-child {
+      border-right: 1px solid $_black;
+    }
+  }
+}
