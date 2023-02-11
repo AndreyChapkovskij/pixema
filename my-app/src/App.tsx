@@ -9,7 +9,7 @@ import { fetchRefresh, fetchUserData } from './redux/userSlice'
 
 import { changeIsTheme } from './redux/themeSlice'
 
-function App() {
+const App: React.FC = () => {
   const dispatch = useAppDispatch()
 
   const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
