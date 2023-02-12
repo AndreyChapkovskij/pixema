@@ -1,5 +1,6 @@
 import styles from './settings.module.scss'
 
+import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
@@ -22,8 +23,6 @@ import Footer from '../../components/Footer'
 import Email from '../../components/UI/Inputs/email'
 import Password from '../../components/UI/Inputs/password'
 import UserName from '../../components/UI/Inputs/userName'
-import Error from '../../components/UI/Inputs/error'
-import { useEffect } from 'react'
 
 interface ISettingsFormData {
   userName?: string
@@ -118,25 +117,17 @@ const Settings: React.FC = () => {
             <form className={styles.settings} onSubmit={onSubmitSave}>
               <div className={styles.profile}>
                 <h3>Profile</h3>
+
                 {emailMessage && (
                   <span className={styles.successMessage}>{emailMessage}</span>
                 )}
 
                 <div className={styles.profile__data}>
-                  <div>
-                    <label>Name</label>
-                    <UserName register={register} />
-                    {errors.userName?.message && (
-                      <Error error={errors.userName.message} />
-                    )}
-                  </div>
-                  <div>
-                    <label>Email</label>
-                    <Email register={register} />
-                    {errors.email?.message && (
-                      <Error error={errors.email.message} />
-                    )}
-                  </div>
+                  <UserName
+                    register={register}
+                    error={errors.userName?.message}
+                  />
+                  <Email register={register} error={errors.email?.message} />
                 </div>
               </div>
               <div className={styles.password}>
@@ -146,42 +137,33 @@ const Settings: React.FC = () => {
                     {passwordMessage}
                   </span>
                 )}
+
                 <div className={styles.password__data}>
-                  <div>
-                    <label>Password</label>
-                    <Password register={register} name="password" />
-                    {errors.password?.message && (
-                      <Error error={errors.password.message} />
-                    )}
-                  </div>
+                  <Password
+                    register={register}
+                    name="password"
+                    error={errors.password?.message}
+                  />
+
                   <div className={styles.password__new}>
-                    <div>
-                      <label>New password</label>
-                      <Password
-                        register={register}
-                        name="newPassword"
-                        placeholder="New password"
-                        required={false}
-                      />
-                      {errors.newPassword?.message && (
-                        <Error error={errors.newPassword.message} />
-                      )}
-                    </div>
-                    <div>
-                      <label>Confirm password</label>
-                      <Password
-                        register={register}
-                        name="confirmPassword"
-                        placeholder="Confirm password"
-                        required={false}
-                      />
-                      {errors.confirmPassword?.message && (
-                        <Error error={errors.confirmPassword.message} />
-                      )}
-                    </div>
+                    <Password
+                      register={register}
+                      name="newPassword"
+                      placeholder="New password"
+                      error={errors.newPassword?.message}
+                      required={false}
+                    />
+                    <Password
+                      register={register}
+                      name="confirmPassword"
+                      placeholder="Confirm password"
+                      error={errors.confirmPassword?.message}
+                      required={false}
+                    />
                   </div>
                 </div>
               </div>
+
               <div className={styles.color}>
                 <h3>Color mode</h3>
                 <div className={styles.color__data}>
@@ -197,9 +179,11 @@ const Settings: React.FC = () => {
                   </div>
                 </div>
               </div>
+
               {errMessage && (
                 <span className={styles.errMessage}>{errMessage}</span>
               )}
+
               <div className={styles.btns}>
                 <button onClick={onSubmitCancel} className={styles.cancel}>
                   Cancel

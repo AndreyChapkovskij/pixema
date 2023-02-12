@@ -1,0 +1,8 @@
+@import '../../../styles/variables.scss';
+
+.searchResult {
+  margin: 0 15px 20px;
+  &.active {
+    color: $_white;
+  }
+}

@@ -4,19 +4,19 @@ import { useAppSelector } from '../../hooks/redux'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import imageEmptyDark from '../../assets/images/imageEmptyDark.png'
-import imageEmptyWhite from '../../assets/images/imageEmptyWhite.png'
-
 import { IFilter } from '../../redux/filterSlice'
 
 import FilterMarks from '../FilterMarks'
 import MovieCard from '../UI/MovieCard'
+import SearchResult from '../UI/SearchResult'
+import NotFound from '../NotFound'
+import Spinner from '../UI/Icons/Spinner'
 
 interface IMovieListProps {
   setCurrentPage: (arg: number) => void
   currentPage: number
   filter: IFilter
-  search?: string
+  search: string
 }
 
 const MoviesList: React.FC<IMovieListProps> = ({
@@ -43,23 +43,12 @@ const MoviesList: React.FC<IMovieListProps> = ({
   }, [inView])
   // -- Auto scroll
 
-  const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
   return (
     <section className={styles.movieList}>
-      {search && (
-        <h3
-          className={
-            isTheme
-              ? styles.searchTitle + ' ' + styles.active
-              : styles.searchTitle
-          }
-        >
-          Результаты по запросу: {search}
-        </h3>
-      )}
-      {filter && (
-        <FilterMarks filter={filter} setCurrentPage={setCurrentPage} />
-      )}
+      {search && <SearchResult search={search} />}
+
+      <FilterMarks filter={filter} setCurrentPage={setCurrentPage} />
+
       {movies.length ? (
         <>
           <div className={styles.movies}>
@@ -67,6 +56,7 @@ const MoviesList: React.FC<IMovieListProps> = ({
               <MovieCard movie={movie} key={movie.id} />
             ))}
           </div>
+
           {(currentPage < totalPages || loading) && (
             <div className={styles.loading} ref={ref}>
               <div
@@ -75,33 +65,13 @@ const MoviesList: React.FC<IMovieListProps> = ({
                 }}
               >
                 <span>Show more</span>
-                {loading && (
-                  <svg className={styles.spinner} viewBox="0 0 50 50">
-                    <circle
-                      className={styles.path}
-                      cx="25"
-                      cy="25"
-                      r="20"
-                      fill="none"
-                      stroke-width="5"
-                    ></circle>
-                  </svg>
-                )}
+                {loading && <Spinner />}
               </div>
             </div>
           )}
         </>
       ) : (
-        <div className={styles.empty}>
-          <div>
-            {isTheme ? (
-              <img src={imageEmptyDark} alt="" />
-            ) : (
-              <img src={imageEmptyWhite} alt="" />
-            )}
-          </div>
-          <span>Not found</span>
-        </div>
+        <NotFound />
       )}
     </section>
   )

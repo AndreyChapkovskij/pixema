@@ -17,6 +17,8 @@ import Footer from '../../components/Footer'
 import Genres from '../../components/UI/Genres'
 import MovieCardDetails from '../../components/UI/MovieCardDetails'
 import MovieCardDetailsMobile from '../../components/UI/MovieCardDetailsMobile.tsx'
+import NotFound from '../../components/NotFound'
+import TableInfo from '../../components/UI/TableInfo'
 
 function MovieDetails() {
   const dispatch = useAppDispatch()
@@ -66,33 +68,12 @@ function MovieDetails() {
                     <div className={styles.desc}>
                       <p>{movie.description}</p>
                     </div>
-                    <table>
-                      <tbody>
-                        {Object.keys(movie.info).map((key) => {
-                          return (
-                            <tr>
-                              <th>{key}</th>
-                              <td>{movie.info[key]}</td>
-                            </tr>
-                          )
-                        })}
-                        <tr>
-                          <th>Year</th>
-                          <td>{movie.year}</td>
-                        </tr>
-                        <tr>
-                          <th>Country</th>
-                          <td>
-                            {movie.country.map((item) => item.name + ' ')}
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <TableInfo movie={movie} />
                     <Recommendations moviesRecommend={moviesRecommend} />
                   </div>
                 </>
               ) : (
-                'not found'
+                <NotFound />
               )}
             </div>
           </div>

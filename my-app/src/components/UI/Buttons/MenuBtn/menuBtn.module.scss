@@ -1,0 +1,25 @@
+@import '../../../../styles/variables.scss';
+
+.menu__btn {
+  background: $_slate-blue;
+  border-radius: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+
+  button {
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    background: none;
+    border: none;
+    color: $_white;
+    i {
+      font-size: $s_icon;
+    }
+  }
+  @media (max-width: 1280px) {
+    display: flex;
+  }
+}

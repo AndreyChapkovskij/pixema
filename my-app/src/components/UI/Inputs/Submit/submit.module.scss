@@ -1,0 +1,19 @@
+@import '../../../../styles/variables.scss';
+
+.submit {
+  margin: 32px 0;
+  input[type='submit'] {
+    width: 100%;
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: $s_input;
+    border: none;
+    background: $_slate-blue;
+    border-radius: 10px;
+    color: $_white;
+    cursor: pointer;
+  }
+  input[disabled] {
+    opacity: 0.5;
+  }
+}
