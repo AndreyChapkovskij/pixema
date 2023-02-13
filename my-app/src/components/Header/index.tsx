@@ -11,13 +11,8 @@ import Account from '../UI/Account'
 interface IHeaderProps {
   fetchWithDebounce?: (e: React.ChangeEvent<HTMLInputElement>) => void
   search?: string
-  setSearch?: (arg: string) => void
 }
-const Header: React.FC<IHeaderProps> = ({
-  fetchWithDebounce,
-  search,
-  setSearch,
-}) => {
+const Header: React.FC<IHeaderProps> = ({ fetchWithDebounce, search }) => {
   const [isMenu, setIsMenu] = useState(false)
   const [isDropDown, setIsDropDown] = useState(false)
 
@@ -26,11 +21,7 @@ const Header: React.FC<IHeaderProps> = ({
       <div className="container">
         <div className={styles.header__wrap}>
           <Logo />
-          <Search
-            search={search}
-            setSearch={setSearch}
-            fetchWithDebounce={fetchWithDebounce}
-          />
+          <Search search={search} fetchWithDebounce={fetchWithDebounce} />
           <Account isDropDown={isDropDown} setIsDropDown={setIsDropDown} />
           <MenuBtn setIsMenu={setIsMenu} />
           <Menu isMenu={isMenu} setIsMenu={setIsMenu} />

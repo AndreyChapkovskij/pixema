@@ -7,7 +7,7 @@ import { fetchResetConfirm } from '../../redux/resetSlice'
 
 import { Params } from 'react-router-dom'
 
-import Password from '../../components/UI/Inputs/password'
+import Password from '../../components/UI/Inputs/FormInputs/password'
 import Submit from '../../components/UI/Inputs/Submit'
 
 interface ResetPasswordFormConfirmData {
@@ -54,7 +54,7 @@ const ResetPasswordFormConfirm: React.FC<IResetTokenProps> = ({
   return (
     <form
       onSubmit={onSubmitResetConfirm}
-      className={isTheme ? styles.forms + ' ' + styles.active : ''}
+      className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
     >
       <h2>Reset password</h2>
       {errMessage && <span className={styles.err}>{errMessage}</span>}

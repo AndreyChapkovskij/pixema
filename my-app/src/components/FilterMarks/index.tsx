@@ -8,7 +8,6 @@ import {
   changeShortSearch,
   changeSortBy,
   IFilter,
-  setIsFilterWasChanged,
 } from '../../redux/filterSlice'
 
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
@@ -24,9 +23,6 @@ const FilterMarks: React.FC<IFilterMarksProps> = ({
 }) => {
   const dispatch = useAppDispatch()
 
-  const isFilterWasChanged = useAppSelector(
-    (state) => state.filterReducer.isFilterWasChanged
-  )
   return (
     <ul className={styles.marks}>
       {filter.sortBy && (
@@ -36,7 +32,6 @@ const FilterMarks: React.FC<IFilterMarksProps> = ({
             className="ri-close-line"
             onClick={() => {
               dispatch(changeSortBy(''))
-              dispatch(setIsFilterWasChanged(!isFilterWasChanged))
               setCurrentPage(1)
             }}
           ></i>
@@ -49,7 +44,6 @@ const FilterMarks: React.FC<IFilterMarksProps> = ({
             className="ri-close-line"
             onClick={() => {
               dispatch(changeShortSearch(''))
-              dispatch(setIsFilterWasChanged(!isFilterWasChanged))
               setCurrentPage(1)
             }}
           ></i>
@@ -62,7 +56,6 @@ const FilterMarks: React.FC<IFilterMarksProps> = ({
             className="ri-close-line"
             onClick={() => {
               dispatch(changeCountry(''))
-              dispatch(setIsFilterWasChanged(!isFilterWasChanged))
               setCurrentPage(1)
             }}
           ></i>
@@ -82,7 +75,6 @@ const FilterMarks: React.FC<IFilterMarksProps> = ({
                         filter.genres.filter((item) => item.id !== genre.id)
                       )
                     )
-                  dispatch(setIsFilterWasChanged(!isFilterWasChanged))
                   setCurrentPage(1)
                 }}
               ></i>
@@ -97,7 +89,6 @@ const FilterMarks: React.FC<IFilterMarksProps> = ({
             className="ri-close-line"
             onClick={() => {
               dispatch(changeGroupByRating(['', '']))
-              dispatch(setIsFilterWasChanged(!isFilterWasChanged))
               setCurrentPage(1)
             }}
           ></i>
@@ -110,7 +101,6 @@ const FilterMarks: React.FC<IFilterMarksProps> = ({
             className="ri-close-line"
             onClick={() => {
               dispatch(changeGroupByYear(['', '']))
-              dispatch(setIsFilterWasChanged(!isFilterWasChanged))
               setCurrentPage(1)
             }}
           ></i>

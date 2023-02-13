@@ -20,9 +20,9 @@ import Header from '../../components/Header'
 import Sidebar from '../../components/Sidebar'
 import Footer from '../../components/Footer'
 
-import Email from '../../components/UI/Inputs/email'
-import Password from '../../components/UI/Inputs/password'
-import UserName from '../../components/UI/Inputs/userName'
+import Email from '../../components/UI/Inputs/FormInputs/email'
+import Password from '../../components/UI/Inputs/FormInputs/password'
+import UserName from '../../components/UI/Inputs/FormInputs/userName'
 
 interface ISettingsFormData {
   userName?: string

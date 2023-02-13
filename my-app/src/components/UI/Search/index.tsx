@@ -3,18 +3,14 @@ import styles from './search.module.scss'
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
 
 import { setIsFilter } from '../../../redux/filterSlice'
+import { useState } from 'react'
 
 interface ISearchProps {
   fetchWithDebounce?: (e: React.ChangeEvent<HTMLInputElement>) => void
   search?: string
-  setSearch?: (arg: string) => void
 }
 
-const Search: React.FC<ISearchProps> = ({
-  fetchWithDebounce,
-  search,
-  setSearch,
-}) => {
+const Search: React.FC<ISearchProps> = ({ fetchWithDebounce, search }) => {
   const dispatch = useAppDispatch()
 
   const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
@@ -26,10 +22,8 @@ const Search: React.FC<ISearchProps> = ({
       <input
         type="text"
         disabled={!fetchWithDebounce}
-        value={search}
         onChange={(e) => {
           fetchWithDebounce && fetchWithDebounce(e)
-          setSearch && setSearch(e.target.value)
         }}
       />
 

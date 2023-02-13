@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 
 import { fetchActivate } from '../../redux/registrationSlice'
 
-import Token from '../../components/UI/Inputs/token'
+import Token from '../../components/UI/Inputs/FormInputs/token'
 import Submit from '../../components/UI/Inputs/Submit'
 
 interface ITokenFormData {
@@ -35,7 +35,7 @@ const TokenForm: React.FC = () => {
   return (
     <form
       onSubmit={onSubmitToken}
-      className={isTheme ? styles.forms + ' ' + styles.active : ''}
+      className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
     >
       <h2>sign up</h2>
       {errMessage && <span className={styles.err}>{errMessage}</span>}

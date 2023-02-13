@@ -9,8 +9,8 @@ import { fetchLogin } from '../../redux/userSlice'
 import { changeSuccessMessage } from '../../redux/userSlice'
 import { IUserParams } from '../../redux/userSlice'
 
-import Email from '../../components/UI/Inputs/email'
-import Password from '../../components/UI/Inputs/password'
+import Email from '../../components/UI/Inputs/FormInputs/email'
+import Password from '../../components/UI/Inputs/FormInputs/password'
 import Submit from '../../components/UI/Inputs/Submit'
 
 const LoginForm: React.FC = () => {
@@ -42,7 +42,7 @@ const LoginForm: React.FC = () => {
 
   return (
     <form
-      className={isTheme ? styles.forms + ' ' + styles.active : ''}
+      className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
       onSubmit={onSubmit}
     >
       <h2>sign in</h2>

@@ -13,10 +13,10 @@ const Login: React.FC = () => {
 
   return (
     <Helmet title={'Login'}>
-      <div className={styles.login}>
+      <section className={styles.login}>
         <Logo />
         {isLoggedIn ? <Navigate to="/home" /> : <LoginForm />}
-      </div>
+      </section>
     </Helmet>
   )
 }

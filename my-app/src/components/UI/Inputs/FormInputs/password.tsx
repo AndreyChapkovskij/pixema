@@ -2,7 +2,7 @@ import styles from './formInput.module.scss'
 
 import { UseFormRegister } from 'react-hook-form'
 
-import Error from './error'
+import Error from '../error'
 
 interface IPasswordProps {
   register: UseFormRegister<any>

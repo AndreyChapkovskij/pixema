@@ -32,10 +32,10 @@ const Registration: React.FC = () => {
 
   return (
     <Helmet title={'Registration'}>
-      <div className={styles.registration}>
+      <section className={styles.registration}>
         <Logo />
         {isToken ? <TokenForm /> : <RegistrationForm />}
-      </div>
+      </section>
     </Helmet>
   )
 }

@@ -1,26 +1,20 @@
 import styles from './filters.module.scss'
 
-import { RefObject, useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 
-import { fetchGenres, clearGenres } from '../../redux/genresSlice'
+import { fetchGenres, clearGenres, IGenres } from '../../redux/genresSlice'
 import { fetchCountry } from '../../redux/countrySlice'
-import {
-  setIsFilter,
-  setIsFilterWasChanged,
-  clearFilter,
-  changeGenres,
-  changeCountry,
-  changeGroupByRating,
-  changeGroupByYear,
-  changeShortSearch,
-  changeSortBy,
-} from '../../redux/filterSlice'
+import { setIsFilter, clearFilter, changeFilter } from '../../redux/filterSlice'
 
 import { useForm } from 'react-hook-form'
-import Year from '../UI/Inputs/year'
-import Rating from '../UI/Inputs/rating'
-import Error from '../UI/Inputs/error'
+
+import Year from '../UI/Inputs/FilterInputs/year'
+import Rating from '../UI/Inputs/FilterInputs/rating'
+import Country from '../UI/Inputs/FilterInputs/Country/country'
+import Genres from '../UI/Inputs/FilterInputs/Genres/genres'
+import SortBY from '../UI/Inputs/FilterInputs/SortBy/sortBy'
+import ShortSearch from '../UI/Inputs/FilterInputs/ShortSearch/shortSearch'
 
 interface IFilterProps {
   setCurrentPage: (arg: number) => void
@@ -32,44 +26,46 @@ interface IValidateInputs {
   yearTo: string
   ratingFrom: string
   ratingTo: string
+  country: string
+  genres: string
+  sortBy: string
+  shortSearch: string
 }
 
 const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
   const dispatch = useAppDispatch()
 
-  const genreInput: RefObject<HTMLInputElement> = useRef(null)
-
   const filter = useAppSelector((state) => state.filterReducer.filter)
   const isFilter = useAppSelector((state) => state.filterReducer.isFilter)
-  const isFilterWasChanged = useAppSelector(
-    (state) => state.filterReducer.isFilterWasChanged
-  )
 
-  const [genreValue, setGenreValue] = useState('') // input
+  const [genreAdded, setGenreAdded] = useState<IGenres[]>([]) // input
 
-  const genresItems = useAppSelector((state) => state.genresReducer.genreItems)
   const countries = useAppSelector((state) => state.countryReducer.countryItems)
 
   useEffect(() => {
     !countries.length && dispatch(fetchCountry())
   }, [])
 
+  const {
+    control,
+    register,
+    handleSubmit,
+    setValue,
+    getValues,
+    watch,
+    setFocus,
+    setError,
+    formState: { errors, isValid },
+  } = useForm<IValidateInputs>({ mode: 'onChange' })
+
   useEffect(() => {
-    if (genreValue) {
-      const genreAdded = filter.genres // Lose context
+    if (watch('genres')) {
+      const genreValue = watch('genres') // Lose context
       dispatch(fetchGenres({ genreValue, genreAdded }))
     } else {
       dispatch(clearGenres())
     }
-  }, [genreValue, filter.genres])
-
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    setError,
-    formState: { errors, isValid },
-  } = useForm<IValidateInputs>({ mode: 'onChange' })
+  }, [watch('genres'), genreAdded])
 
   const onSubmitFilter = handleSubmit(
     ({ yearFrom, yearTo, ratingFrom, ratingTo }) => {
@@ -82,11 +78,17 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
           ? setError('ratingFrom', { message: 'Fill in ratingFrom input' })
           : setError('ratingTo', { message: 'Fill in ratingTo input' })
       } else {
-        yearFrom && dispatch(changeGroupByYear([yearFrom, yearTo]))
-        ratingFrom && dispatch(changeGroupByRating([ratingFrom, ratingTo]))
-
+        dispatch(
+          changeFilter({
+            genres: genreAdded,
+            sortBy: getValues('sortBy'),
+            shortSearch: getValues('shortSearch'),
+            groupByYear: [getValues('yearFrom'), getValues('yearTo')],
+            groupByRating: [getValues('ratingFrom'), getValues('ratingTo')],
+            country: getValues('country'),
+          })
+        )
         dispatch(setIsFilter(false))
-        dispatch(setIsFilterWasChanged(!isFilterWasChanged))
         currentPage !== 1 && setCurrentPage(1)
       }
     }
@@ -97,7 +99,11 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
     setValue('ratingTo', filter.groupByRating[1])
     setValue('yearFrom', filter.groupByYear[0])
     setValue('yearTo', filter.groupByYear[1])
-  }, [isFilterWasChanged])
+    setValue('country', filter.country)
+    setValue('sortBy', filter.sortBy)
+    setValue('shortSearch', filter.shortSearch)
+    setGenreAdded(filter.genres)
+  }, [])
 
   return (
     <div
@@ -118,133 +124,43 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
           </div>
         </div>
         <form onSubmit={onSubmitFilter}>
-          <div className={styles.sort}>
-            <span>Sort by</span>
-            <div className={styles.sort__types}>
-              <div
-                className={filter.sortBy === 'rating' ? styles.active : ''}
-                onClick={() => {
-                  dispatch(changeSortBy('rating'))
-                }}
-              >
-                <span>Rating</span>
-              </div>
-              <div
-                className={filter.sortBy === 'year' ? styles.active : ''}
-                onClick={() => {
-                  dispatch(changeSortBy('year'))
-                }}
-              >
-                <span>Year</span>
-              </div>
-            </div>
-          </div>
+          <SortBY
+            register={register}
+            name="sortBy"
+            error={errors.sortBy?.message}
+            setValue={setValue}
+            watch={watch}
+          />
+          <ShortSearch
+            register={register}
+            name="shortSearch"
+            placeholder="Your text"
+            error={errors.shortSearch?.message}
+          />
+          <Genres
+            register={register}
+            name="genres"
+            error={errors.genres?.message}
+            genreAdded={genreAdded}
+            setGenreAdded={setGenreAdded}
+            setValue={setValue}
+            setFocus={setFocus}
+            watch={watch}
+          />
+          <Year
+            register={register}
+            placeholder={['From', 'To']}
+            name={['yearFrom', 'yearTo']}
+            error={errors.yearFrom?.message || errors.yearTo?.message}
+          />
+          <Rating
+            register={register}
+            placeholder={['From', 'To']}
+            name={['ratingFrom', 'ratingTo']}
+            error={errors.ratingFrom?.message || errors.ratingTo?.message}
+          />
+          <Country control={control} name="country" countries={countries} />
 
-          <div className={styles.name}>
-            <span>Full or short movie name</span>
-            <input
-              value={filter.shortSearch}
-              onChange={(e) => dispatch(changeShortSearch(e.target.value))}
-              type="text"
-              placeholder="Your text"
-            />
-          </div>
-
-          <div className={styles.genres}>
-            <span>Sort by</span>
-            <div
-              className={styles.genres__types}
-              onClick={() => genreInput.current?.focus()}
-            >
-              {filter.genres &&
-                filter.genres.map((genre) => (
-                  <div className={styles.genres__marks} key={genre.id}>
-                    <span>{genre.name}</span>
-                    <i
-                      className="ri-close-line"
-                      onClick={() => {
-                        dispatch(
-                          changeGenres(
-                            filter.genres.filter((item) => item.id !== genre.id)
-                          )
-                        )
-                      }}
-                    ></i>
-                  </div>
-                ))}
-
-              <div className={styles.genres__search}>
-                <input
-                  ref={genreInput}
-                  type="text"
-                  value={genreValue}
-                  onChange={(e) => {
-                    setGenreValue(e.target.value)
-                    if (genreValue === genresItems[0]?.name) {
-                      setGenreValue('')
-                      dispatch(changeGenres([...filter.genres, genresItems[0]]))
-                    }
-                  }}
-                />
-                <ul className={genresItems.length ? styles.active : ''}>
-                  {genresItems.map((genre) => (
-                    <li
-                      onClick={() => {
-                        dispatch(changeGenres([...filter.genres, genre]))
-                        setGenreValue('')
-                      }}
-                      key={genre.id}
-                    >
-                      <span>{genre.name}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className={styles.years}>
-            <span>Years</span>
-            <div className={styles.years__input}>
-              <Year register={register} placeholder="From" name="yearFrom" />
-              <Year register={register} placeholder="To" name="yearTo" />
-            </div>
-            {errors.yearFrom?.message && (
-              <Error error={errors.yearFrom.message} />
-            )}
-            {errors.yearTo?.message && <Error error={errors.yearTo.message} />}
-          </div>
-          <div className={styles.rating}>
-            <span>Rating</span>
-            <div className={styles.rating__input}>
-              <Rating
-                register={register}
-                placeholder="From"
-                name="ratingFrom"
-              />
-              <Rating register={register} placeholder="To" name="ratingTo" />
-            </div>
-            {errors.ratingFrom?.message && (
-              <Error error={errors.ratingFrom.message} />
-            )}
-            {errors.ratingTo?.message && (
-              <Error error={errors.ratingTo.message} />
-            )}
-          </div>
-          <div className={styles.country}>
-            <span>Country</span>
-            <select
-              value={filter.country}
-              onClick={() => !countries.length && dispatch(fetchCountry())}
-              onChange={(e) => dispatch(changeCountry(e.target.value))}
-            >
-              <option>Select country</option>
-              {countries?.map((item) => (
-                <option key={item.id} value={item.name}>
-                  {item.name}
-                </option>
-              ))}
-            </select>
-          </div>
           <div className={styles.btn}>
             <button
               className={styles.btn__clear}
@@ -252,7 +168,15 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
                 e.preventDefault()
                 dispatch(setIsFilter(false))
                 dispatch(clearFilter())
-                dispatch(setIsFilterWasChanged(!isFilterWasChanged))
+
+                setValue('ratingFrom', '')
+                setValue('ratingTo', '')
+                setValue('yearFrom', '')
+                setValue('yearTo', '')
+                setValue('country', '')
+                setValue('sortBy', '')
+                setValue('shortSearch', '')
+                setGenreAdded([])
               }}
             >
               Clear filter

@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 
 import { fetchResetPassword } from '../../redux/resetSlice'
 
-import Email from '../../components/UI/Inputs/email'
+import Email from '../../components/UI/Inputs/FormInputs/email'
 import Submit from '../../components/UI/Inputs/Submit'
 
 interface IResetPasswordFormData {
@@ -35,7 +35,7 @@ const ResetPasswordForm: React.FC = () => {
   return (
     <form
       onSubmit={onSubmitResetPassword}
-      className={isTheme ? styles.forms + ' ' + styles.active : ''}
+      className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
     >
       <h2>Reset password</h2>
       {resetMessage ? (

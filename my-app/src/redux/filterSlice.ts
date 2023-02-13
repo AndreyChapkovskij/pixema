@@ -12,13 +12,11 @@ export interface IFilter {
 
 interface IFilterState {
   isFilter: boolean
-  isFilterWasChanged: boolean
   filter: IFilter
 }
 
 const initialState: IFilterState = {
   isFilter: false,
-  isFilterWasChanged: false,
   filter: {
     genres: [],
     sortBy: '',
@@ -35,9 +33,6 @@ const filterSlice = createSlice({
   reducers: {
     setIsFilter: (state, action: PayloadAction<boolean>) => {
       state.isFilter = action.payload
-    },
-    setIsFilterWasChanged: (state, action: PayloadAction<boolean>) => {
-      state.isFilterWasChanged = action.payload
     },
     changeGenres: (state, action: PayloadAction<IGenres[]>) => {
       state.filter.genres = action.payload
@@ -67,12 +62,14 @@ const filterSlice = createSlice({
         country: '',
       }
     },
+    changeFilter: (state, action: PayloadAction<IFilter>) => {
+      state.filter = action.payload
+    },
   },
 })
 
 export const {
   setIsFilter,
-  setIsFilterWasChanged,
   changeGenres,
   changeSortBy,
   changeShortSearch,
@@ -80,6 +77,7 @@ export const {
   changeGroupByRating,
   changeCountry,
   clearFilter,
+  changeFilter,
 } = filterSlice.actions
 
 export default filterSlice.reducer

@@ -19,9 +19,6 @@ const Trends: React.FC = () => {
   const [search, setSearch] = useState('')
 
   const filter = useAppSelector((state) => state.filterReducer.filter)
-  const isFilterWasChanged = useAppSelector(
-    (state) => state.filterReducer.isFilterWasChanged
-  )
 
   const fetchWithDebounce = useDebounce((e) => {
     currentPage === 1
@@ -29,19 +26,17 @@ const Trends: React.FC = () => {
           fetchMoviesTrends({ filter, currentPage: 1, search: e.target.value })
         )
       : setCurrentPage(1)
+
+    setSearch(e.target.value)
   }, 1000)
 
   useEffect(() => {
     dispatch(fetchMoviesTrends({ filter, currentPage, search }))
-  }, [isFilterWasChanged, currentPage])
+  }, [filter, currentPage])
 
   return (
     <Helmet title={'Trends'}>
-      <Header
-        fetchWithDebounce={fetchWithDebounce}
-        search={search}
-        setSearch={setSearch}
-      />
+      <Header fetchWithDebounce={fetchWithDebounce} search={search} />
       <section>
         <div className="container">
           <div className="wrap">

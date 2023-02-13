@@ -6,9 +6,9 @@ import { useForm } from 'react-hook-form'
 
 import { fetchRegister } from '../../redux/registrationSlice'
 
-import Email from '../../components/UI/Inputs/email'
-import Password from '../../components/UI/Inputs/password'
-import UserName from '../../components/UI/Inputs/userName'
+import Email from '../../components/UI/Inputs/FormInputs/email'
+import Password from '../../components/UI/Inputs/FormInputs/password'
+import UserName from '../UI/Inputs/FormInputs/userName'
 import Submit from '../../components/UI/Inputs/Submit'
 
 interface IRegistrationFormData {
@@ -57,7 +57,7 @@ const RegistrationForm: React.FC = () => {
 
   return (
     <form
-      className={isTheme ? styles.forms + ' ' + styles.active : ''}
+      className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
       onSubmit={onSubmitRegistration}
     >
       <h2>sign up</h2>

@@ -4,6 +4,7 @@ export interface ICountry {
   id: number
   name: string
 }
+
 interface ICountryState {
   countryItems: ICountry[]
 }
@@ -45,6 +46,5 @@ const countrySlice = createSlice({
     })
   },
 })
-
 
 export default countrySlice.reducer

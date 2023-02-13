@@ -1,0 +1,23 @@
+@import '../../../../styles/variables.scss';
+
+.year,
+.rating {
+  margin-bottom: 24px;
+  .years__input,
+  .rating__input {
+    display: flex;
+    justify-content: space-between;
+    input {
+      outline: none;
+      border: none;
+      background: $_dim-grey;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: $s_input;
+      line-height: 24px;
+      color: $_grey;
+      width: 45%;
+      padding: 8px 20px;
+    }
+  }
+}

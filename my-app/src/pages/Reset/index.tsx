@@ -29,14 +29,14 @@ const Reset: React.FC = () => {
 
   return (
     <Helmet title={'Reset'}>
-      <div className={styles.reset}>
+      <section className={styles.reset}>
         <Logo />
         {resetToken.uid && resetToken.token ? (
           <ResetPasswordFormConfirm resetToken={resetToken} />
         ) : (
           <ResetPasswordForm />
         )}
-      </div>
+      </section>
     </Helmet>
   )
 }

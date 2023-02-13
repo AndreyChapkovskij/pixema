@@ -1,0 +1,28 @@
+@import '../../../../../styles/variables.scss';
+
+.country {
+  margin-bottom: 110px;
+  .country__select {
+    & > div {
+      background: $_dim-grey;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      & > div {
+        color: $_grey;
+        & > div {
+          background: none;
+          color: $_grey;
+          cursor: pointer;
+        }
+      }
+      div {
+        outline: none;
+        border: none;
+      }
+      span {
+        width: 0;
+      }
+    }
+  }
+}
