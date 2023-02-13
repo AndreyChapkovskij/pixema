@@ -103,7 +103,7 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
     setValue('sortBy', filter.sortBy)
     setValue('shortSearch', filter.shortSearch)
     setGenreAdded(filter.genres)
-  }, [])
+  }, [filter])
 
   return (
     <div
@@ -168,15 +168,6 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
                 e.preventDefault()
                 dispatch(setIsFilter(false))
                 dispatch(clearFilter())
-
-                setValue('ratingFrom', '')
-                setValue('ratingTo', '')
-                setValue('yearFrom', '')
-                setValue('yearTo', '')
-                setValue('country', '')
-                setValue('sortBy', '')
-                setValue('shortSearch', '')
-                setGenreAdded([])
               }}
             >
               Clear filter

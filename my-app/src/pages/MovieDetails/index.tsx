@@ -45,37 +45,35 @@ function MovieDetails() {
         <div className="container">
           <div className="wrap">
             <Sidebar />
-            <div className={styles.movie}>
-              {movie ? (
-                <>
-                  <MovieCardDetails movie={movie} />
-                  <div className={styles.movie__info}>
-                    <Genres genres={movie.genres} />
-                    <h2>{movie.title}</h2>
-                    <div className={styles.marks}>
-                      <div className={styles.rating}>
-                        <span>{movie.rating}</span>
-                      </div>
-                      <div className={styles.imdb}>
-                        <span>IMDb</span>
-                        <span>{movie.imdb}</span>
-                      </div>
-                      <div className={styles.duration}>
-                        <span>{movie.duration} min</span>
-                      </div>
+            {movie ? (
+              <div className={styles.movie}>
+                <MovieCardDetails movie={movie} />
+                <div className={styles.movie__info}>
+                  <Genres genres={movie.genres} />
+                  <h2>{movie.title}</h2>
+                  <div className={styles.marks}>
+                    <div className={styles.rating}>
+                      <span>{movie.rating}</span>
                     </div>
-                    <MovieCardDetailsMobile movie={movie} />
-                    <div className={styles.desc}>
-                      <p>{movie.description}</p>
+                    <div className={styles.imdb}>
+                      <span>IMDb</span>
+                      <span>{movie.imdb}</span>
                     </div>
-                    <TableInfo movie={movie} />
-                    <Recommendations moviesRecommend={moviesRecommend} />
+                    <div className={styles.duration}>
+                      <span>{movie.duration} min</span>
+                    </div>
                   </div>
-                </>
-              ) : (
-                <NotFound />
-              )}
-            </div>
+                  <MovieCardDetailsMobile movie={movie} />
+                  <div className={styles.desc}>
+                    <p>{movie.description}</p>
+                  </div>
+                  <TableInfo movie={movie} />
+                  <Recommendations moviesRecommend={moviesRecommend} />
+                </div>
+              </div>
+            ) : (
+              <NotFound />
+            )}
           </div>
         </div>
       </section>

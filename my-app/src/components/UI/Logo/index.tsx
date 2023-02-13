@@ -4,12 +4,19 @@ import { useNavigate } from 'react-router-dom'
 
 import { useAppSelector } from '../../../hooks/redux'
 
-const Logo: React.FC = () => {
+interface ILogoProps {
+  customClassName?: string
+}
+
+const Logo: React.FC<ILogoProps> = ({ customClassName }) => {
   const navigate = useNavigate()
   const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
 
   return (
-    <div className={styles.logo} onClick={() => navigate('/home')}>
+    <div
+      className={styles.logo + ' ' + customClassName}
+      onClick={() => navigate('/home')}
+    >
       <span>pix</span>
       <span className={isTheme ? styles.active : ''}>ema</span>
     </div>

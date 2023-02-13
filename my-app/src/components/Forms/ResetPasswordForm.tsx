@@ -39,7 +39,7 @@ const ResetPasswordForm: React.FC = () => {
     >
       <h2>Reset password</h2>
       {resetMessage ? (
-        <span className={styles.resetMessage}>{resetMessage}</span>
+        <span className={styles.success}>{resetMessage}</span>
       ) : (
         watch('email') && (
           <span className={styles.emailMessage}>

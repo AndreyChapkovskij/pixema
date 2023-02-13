@@ -57,7 +57,6 @@ const LoginForm: React.FC = () => {
         error={errors.password?.message}
       />
       <span onClick={() => navigate('/reset')}>Forgot password?</span>
-
       <Submit isValid={isValid} value="Sign in" />
       <div className={styles.signLink}>
         <span>Don’t have an account? </span>

@@ -1,18 +1,18 @@
 @import '../../../styles/variables.scss';
 
 .logo {
-  width: 274px;
-  @media (max-width: 1820px) {
-    width: 259px;
-  }
-  @media (max-width: 1280px) {
-    width: 208px;
-  }
-  @media (max-width: 530px) {
-    width: auto;
-  }
+  // width: 274px;
+  // @media (max-width: 1820px) {
+  //   width: 259px;
+  // }
+  // @media (max-width: 1280px) {
+  //   width: 208px;
+  // }
+  // @media (max-width: 530px) {
+  //   width: auto;
+  // }
   margin: 0 15px;
-  z-index: 1;
+  // z-index: 1;
   cursor: pointer;
   // align-self: flex-start;
   display: flex;
@@ -21,9 +21,6 @@
   font-weight: 700;
   span:first-child {
     color: $_slate-blue;
-  }
-  span {
-    color: $_black;
   }
   span.active {
     color: $_white;

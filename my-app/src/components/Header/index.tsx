@@ -20,7 +20,7 @@ const Header: React.FC<IHeaderProps> = ({ fetchWithDebounce, search }) => {
     <header className={styles.header}>
       <div className="container">
         <div className={styles.header__wrap}>
-          <Logo />
+          <Logo customClassName={styles.header__logo} />
           <Search search={search} fetchWithDebounce={fetchWithDebounce} />
           <Account isDropDown={isDropDown} setIsDropDown={setIsDropDown} />
           <MenuBtn setIsMenu={setIsMenu} />

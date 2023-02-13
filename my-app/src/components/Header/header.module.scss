@@ -9,4 +9,19 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  .header__logo {
+    width: 274px;
+    @media (max-width: 1820px) {
+      width: 259px;
+    }
+    @media (max-width: 1280px) {
+      width: 208px;
+    }
+    @media (max-width: 530px) {
+      width: auto;
+    }
+    span {
+      color: $_black;
+    }
+  }
 }

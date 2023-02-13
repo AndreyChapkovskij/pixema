@@ -1,16 +1,16 @@
-import styles from './registration.module.scss'
+import styles from '../accountPage.module.scss'
 
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
 import { useNavigate } from 'react-router-dom'
 
-import { changeIsSuccess } from '../../redux/registrationSlice'
-import { changeSuccessMessage } from '../../redux/userSlice'
+import { changeIsSuccess } from '../../../redux/registrationSlice'
+import { changeSuccessMessage } from '../../../redux/userSlice'
 
-import Helmet from '../../components/Helmet'
-import Logo from '../../components/UI/Logo'
-import RegistrationForm from '../../components/Forms/RegistrationForm'
-import TokenForm from '../../components/Forms/TokenForm'
+import Helmet from '../../../components/Helmet'
+import Logo from '../../../components/UI/Logo'
+import RegistrationForm from '../../../components/Forms/RegistrationForm'
+import TokenForm from '../../../components/Forms/TokenForm'
 
 const Registration: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -32,7 +32,7 @@ const Registration: React.FC = () => {
 
   return (
     <Helmet title={'Registration'}>
-      <section className={styles.registration}>
+      <section className={styles.accountPage}>
         <Logo />
         {isToken ? <TokenForm /> : <RegistrationForm />}
       </section>
