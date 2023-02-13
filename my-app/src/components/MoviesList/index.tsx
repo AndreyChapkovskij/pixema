@@ -44,7 +44,7 @@ const MoviesList: React.FC<IMovieListProps> = ({
   // -- Auto scroll
 
   return (
-    <section className={styles.movieList}>
+    <div className={styles.movieList}>
       {search && <SearchResult search={search} />}
 
       <FilterMarks filter={filter} setCurrentPage={setCurrentPage} />
@@ -73,7 +73,7 @@ const MoviesList: React.FC<IMovieListProps> = ({
       ) : (
         <NotFound />
       )}
-    </section>
+    </div>
   )
 }
 

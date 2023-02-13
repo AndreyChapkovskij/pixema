@@ -7,10 +7,12 @@ import { addFavorite, delFavorite } from '../../../redux/moviesSlice'
 
 interface IMovieCardDetailsMobileProps {
   movie: IMovieDetails
+  setIsModal: (arg: boolean) => void
 }
 
 const MovieCardDetailsMobile: React.FC<IMovieCardDetailsMobileProps> = ({
   movie,
+  setIsModal,
 }) => {
   const dispatch = useAppDispatch()
 
@@ -47,7 +49,7 @@ const MovieCardDetailsMobile: React.FC<IMovieCardDetailsMobileProps> = ({
           </div>
         )}
 
-        <div className={styles.share}>
+        <div className={styles.share} onClick={() => setIsModal(true)}>
           <i className="ri-share-line"></i>
         </div>
       </div>

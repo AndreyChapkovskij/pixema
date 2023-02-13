@@ -1,6 +1,6 @@
 import styles from './movie.module.scss'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 
@@ -19,10 +19,14 @@ import MovieCardDetails from '../../components/UI/MovieCardDetails'
 import MovieCardDetailsMobile from '../../components/UI/MovieCardDetailsMobile.tsx'
 import NotFound from '../../components/NotFound'
 import TableInfo from '../../components/UI/TableInfo'
+import Popup from '../../components/Popup'
+import Social from '../../components/UI/Social'
 
 function MovieDetails() {
   const dispatch = useAppDispatch()
   const { id } = useParams()
+
+  const [isModal, setIsModal] = useState(false)
 
   useEffect(() => {
     if (id) {
@@ -47,7 +51,7 @@ function MovieDetails() {
             <Sidebar />
             {movie ? (
               <div className={styles.movie}>
-                <MovieCardDetails movie={movie} />
+                <MovieCardDetails movie={movie} setIsModal={setIsModal} />
                 <div className={styles.movie__info}>
                   <Genres genres={movie.genres} />
                   <h2>{movie.title}</h2>
@@ -63,7 +67,10 @@ function MovieDetails() {
                       <span>{movie.duration} min</span>
                     </div>
                   </div>
-                  <MovieCardDetailsMobile movie={movie} />
+                  <MovieCardDetailsMobile
+                    movie={movie}
+                    setIsModal={setIsModal}
+                  />
                   <div className={styles.desc}>
                     <p>{movie.description}</p>
                   </div>
@@ -76,6 +83,13 @@ function MovieDetails() {
             )}
           </div>
         </div>
+        <Popup
+          title={'social pixema'}
+          isModal={isModal}
+          setIsModal={setIsModal}
+        >
+          <Social />
+        </Popup>
       </section>
       <Footer />
     </Helmet>
