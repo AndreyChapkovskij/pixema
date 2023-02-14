@@ -50,13 +50,16 @@ const LoginForm: React.FC = () => {
         <span className={styles.success}>{successMessage}</span>
       )}
 
-      <Email register={register} error={errors.email?.message} />
-      <Password
-        register={register}
-        name="password"
-        error={errors.password?.message}
-      />
+      <div className={styles.forms__inputs}>
+        <Email register={register} error={errors.email?.message} />
+        <Password
+          register={register}
+          name="password"
+          error={errors.password?.message}
+        />
+      </div>
       <span onClick={() => navigate('/reset')}>Forgot password?</span>
+
       <Submit isValid={isValid} value="Sign in" />
       <div className={styles.signLink}>
         <span>Don’t have an account? </span>

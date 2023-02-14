@@ -1,6 +1,7 @@
 import styles from './modal.module.scss'
 
 import { useAppSelector } from '../../hooks/redux'
+import { useEffect } from 'react'
 
 interface IPopupProps {
   children: React.DetailedHTMLProps<
@@ -19,6 +20,12 @@ const Popup: React.FC<IPopupProps> = ({
   title,
 }) => {
   const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
+
+  useEffect(() => {
+    isModal
+      ? (document.body.style.overflowY = 'hidden')
+      : (document.body.style.overflowY = 'auto')
+  }, [isModal])
 
   return (
     <div

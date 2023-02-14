@@ -150,12 +150,14 @@ const Settings: React.FC = () => {
                       register={register}
                       name="newPassword"
                       placeholder="New password"
+                      label="New password"
                       error={errors.newPassword?.message}
                       required={false}
                     />
                     <Password
                       register={register}
                       name="confirmPassword"
+                      label="Confirm password"
                       placeholder="Confirm password"
                       error={errors.confirmPassword?.message}
                       required={false}

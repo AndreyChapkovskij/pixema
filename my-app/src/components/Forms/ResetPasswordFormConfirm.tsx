@@ -56,18 +56,22 @@ const ResetPasswordFormConfirm: React.FC<IResetTokenProps> = ({
       onSubmit={onSubmitResetConfirm}
       className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
     >
-      <h2>Reset password</h2>
+      <h2>New password</h2>
       {errMessage && <span className={styles.err}>{errMessage}</span>}
-      <Password
-        register={register}
-        name="password"
-        error={errors.password?.message}
-      />
-      <Password
-        register={register}
-        name="newPassword"
-        error={errors.newPassword?.message}
-      />
+      <div className={styles.forms__inputs}>
+        <Password
+          register={register}
+          name="password"
+          error={errors.password?.message}
+        />
+        <Password
+          register={register}
+          name="newPassword"
+          placeholder="Confirm your password"
+          label="Confirm Password"
+          error={errors.newPassword?.message}
+        />
+      </div>
 
       <Submit isValid={isValid} value="Set password" />
     </form>

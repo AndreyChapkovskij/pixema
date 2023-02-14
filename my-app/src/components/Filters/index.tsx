@@ -13,7 +13,7 @@ import Year from '../UI/Inputs/FilterInputs/year'
 import Rating from '../UI/Inputs/FilterInputs/rating'
 import Country from '../UI/Inputs/FilterInputs/Country/country'
 import Genres from '../UI/Inputs/FilterInputs/Genres/genres'
-import SortBY from '../UI/Inputs/FilterInputs/SortBy/sortBy'
+import SortBy from '../UI/Inputs/FilterInputs/SortBy/sortBy'
 import ShortSearch from '../UI/Inputs/FilterInputs/ShortSearch/shortSearch'
 
 interface IFilterProps {
@@ -57,15 +57,6 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
     setError,
     formState: { errors, isValid },
   } = useForm<IValidateInputs>({ mode: 'onChange' })
-
-  useEffect(() => {
-    if (watch('genres')) {
-      const genreValue = watch('genres') // Lose context
-      dispatch(fetchGenres({ genreValue, genreAdded }))
-    } else {
-      dispatch(clearGenres())
-    }
-  }, [watch('genres'), genreAdded])
 
   const onSubmitFilter = handleSubmit(
     ({ yearFrom, yearTo, ratingFrom, ratingTo }) => {
@@ -130,7 +121,7 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
           </div>
         </div>
         <form onSubmit={onSubmitFilter}>
-          <SortBY
+          <SortBy
             register={register}
             name="sortBy"
             error={errors.sortBy?.message}

@@ -14,35 +14,50 @@ import { Link } from 'react-router-dom'
 const Social: React.FC = () => {
   const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
 
+  const socials = [
+    {
+      id: 1,
+      name: 'vk',
+      link: 'https://vk.com',
+      icon: vk,
+    },
+    {
+      id: 2,
+      name: 'instagram',
+      link: 'https://instagram.com',
+      icon: instagram,
+    },
+    {
+      id: 3,
+      name: 'twitter',
+      link: 'https://twitter.com',
+      icon: twitter,
+    },
+    {
+      id: 4,
+      name: 'facebook',
+      link: 'https://facebook.com',
+      icon: facebook,
+    },
+    {
+      id: 5,
+      name: 'odnoklassniki',
+      link: 'https://ok.ru',
+      icon: odnoklassniki,
+    },
+  ]
+
   return (
     <ul
       className={isTheme ? styles.social + ' ' + styles.active : styles.social}
     >
-      <motion.li whileHover={{ scale: 1.1 }}>
-        <Link to={'https://vk.com'} target={'_blank'}>
-          <img src={vk} alt="vk" />
-        </Link>
-      </motion.li>
-      <motion.li whileHover={{ scale: 1.1 }}>
-        <Link to={'https://instagram.com'} target={'_blank'}>
-          <img src={instagram} alt="instagram" />
-        </Link>
-      </motion.li>
-      <motion.li whileHover={{ scale: 1.1 }}>
-        <Link to={'https://twitter.com'} target={'_blank'}>
-          <img src={twitter} alt="twitter" />
-        </Link>
-      </motion.li>
-      <motion.li whileHover={{ scale: 1.1 }}>
-        <Link to={'https://facebook.com'} target={'_blank'}>
-          <img src={facebook} alt="facebook" />
-        </Link>
-      </motion.li>
-      <motion.li whileHover={{ scale: 1.1 }}>
-        <Link to={'https://ok.ru'} target={'_blank'}>
-          <img src={odnoklassniki} alt="odnoklassniki" />
-        </Link>
-      </motion.li>
+      {socials.map((social) => (
+        <motion.li whileHover={{ scale: 1.1 }} key={social.id}>
+          <Link to={social.link} target={'_blank'}>
+            <img src={social.icon} alt={social.name} />
+          </Link>
+        </motion.li>
+      ))}
     </ul>
   )
 }

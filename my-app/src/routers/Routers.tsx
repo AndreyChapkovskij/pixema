@@ -10,6 +10,7 @@ import Reset from '../pages/AccountPages/Reset'
 import MovieDetails from '../pages/MovieDetails'
 import Settings from '../pages/Settings'
 import Trends from '../pages/Trends'
+import Dashboard from '../pages/Dashboard'
 import ProtectedRoute from './ProtectedRoute'
 
 const Routers: React.FC = () => {
@@ -25,9 +26,11 @@ const Routers: React.FC = () => {
         <Route path=":uid/:token" element={<Reset />} />
       </Route>
       <Route path="/trends" element={<Trends />}></Route>
+      <Route path="dashboard" element={<Dashboard />} />
       <Route path="" element={<ProtectedRoute />}>
         <Route path="settings" element={<Settings />} />
       </Route>
+      {/* <Route path="*" element={<Navigate to="home" />} /> */}
     </Routes>
   )
 }

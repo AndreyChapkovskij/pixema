@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.dashboard {
+  h2 {
+    font-size: $s_title_second;
+  }
+}
+
+.active {
+  h2 {
+    color: $_white;
+  }
+}

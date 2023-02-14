@@ -7,7 +7,8 @@ import {
   UseFormWatch,
 } from 'react-hook-form'
 
-import { useAppSelector } from '../../../../../hooks/redux'
+import { useAppSelector, useAppDispatch } from '../../../../../hooks/redux'
+import { fetchGenres, clearGenres } from '../../../../../redux/genresSlice'
 
 import Error from '../../error'
 import { IGenres } from '../../../../../redux/genresSlice'
@@ -34,13 +35,21 @@ const Genres: React.FC<IGenresProps> = ({
   setFocus,
   watch,
 }) => {
+  const dispatch = useAppDispatch()
+
   useEffect(() => {
     if (watch(name) && watch(name) === genresItems[0]?.name) {
       setGenreAdded([...genreAdded, genresItems[0]])
       setValue(name, '')
-      console.log(genresItems[0])
     }
-  }, [watch(name)])
+
+    if (watch('genres')) {
+      const genreValue = watch('genres') // Lose context
+      dispatch(fetchGenres({ genreValue, genreAdded }))
+    } else {
+      dispatch(clearGenres())
+    }
+  }, [watch(name), genreAdded])
 
   const genresItems = useAppSelector((state) => state.genresReducer.genreItems)
 

@@ -10,6 +10,7 @@ interface IPasswordProps {
   error: string | undefined
   required?: boolean
   placeholder?: string
+  label?: string
 }
 
 const Password: React.FC<IPasswordProps> = ({
@@ -18,10 +19,11 @@ const Password: React.FC<IPasswordProps> = ({
   error,
   required,
   placeholder,
+  label,
 }) => {
   return (
     <div className={styles.formInput}>
-      <label>Password</label>
+      <label>{label ?? 'Password'}</label>
       <>
         {required || required === undefined ? (
           <input

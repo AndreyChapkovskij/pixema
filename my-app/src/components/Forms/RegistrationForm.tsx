@@ -64,19 +64,23 @@ const RegistrationForm: React.FC = () => {
 
       {errMessage && <span className={styles.err}>{errMessage}</span>}
 
-      <UserName register={register} error={errors.userName?.message} />
-      <Email register={register} error={errors.email?.message} />
-      <Password
-        register={register}
-        name="password"
-        error={errors.password?.message}
-      />
-      <Password
-        register={register}
-        name="confirmPassword"
-        placeholder="Confirm password"
-        error={errors.confirmPassword?.message}
-      />
+      <div className={styles.forms__inputs}>
+        <UserName register={register} error={errors.userName?.message} />
+        <Email register={register} error={errors.email?.message} />
+        <Password
+          register={register}
+          name="password"
+          error={errors.password?.message}
+        />
+        <Password
+          register={register}
+          name="confirmPassword"
+          label="Confirm password"
+          placeholder="Confirm password"
+          error={errors.confirmPassword?.message}
+        />
+      </div>
+
       <Submit isValid={isValid} value={'Sign Up'} />
       <div className={styles.signLink}>
         <span>Already have an account?</span>
