@@ -16,7 +16,6 @@ import Helmet from '../../components/Helmet'
 import Footer from '../../components/Footer'
 import Genres from '../../components/UI/Genres'
 import MovieCardDetails from '../../components/UI/MovieCardDetails'
-import MovieCardDetailsMobile from '../../components/UI/MovieCardDetailsMobile.tsx'
 import NotFound from '../../components/NotFound'
 import TableInfo from '../../components/UI/TableInfo'
 import Popup from '../../components/Popup'
@@ -50,11 +49,11 @@ function MovieDetails() {
           <div className="wrap">
             <Sidebar />
             {movie ? (
-              <div className={styles.movie}>
+              <section className={styles.movie}>
                 <MovieCardDetails movie={movie} setIsModal={setIsModal} />
                 <div className={styles.movie__info}>
                   <Genres genres={movie.genres} />
-                  <h2>{movie.title}</h2>
+                  <h2 className={styles.title}>{movie.title}</h2>
                   <div className={styles.marks}>
                     <div className={styles.rating}>
                       <span>{movie.rating}</span>
@@ -67,17 +66,13 @@ function MovieDetails() {
                       <span>{movie.duration} min</span>
                     </div>
                   </div>
-                  <MovieCardDetailsMobile
-                    movie={movie}
-                    setIsModal={setIsModal}
-                  />
                   <div className={styles.desc}>
                     <p>{movie.description}</p>
                   </div>
                   <TableInfo movie={movie} />
                   <Recommendations moviesRecommend={moviesRecommend} />
                 </div>
-              </div>
+              </section>
             ) : (
               <NotFound />
             )}

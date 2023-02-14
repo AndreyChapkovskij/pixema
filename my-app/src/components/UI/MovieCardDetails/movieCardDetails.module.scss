@@ -6,7 +6,39 @@
     min-width: $w_card_second;
   }
   @media (max-width: 768px) {
-    display: none;
+    width: 360px;
+    align-self: center;
+  }
+  @media (max-width: 506px) {
+    width: $w_card_main;
+  }
+  @media (max-width: 326px) {
+    width: $w_card_second;
+  }
+
+  .image {
+    height: $h_image_main;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    @media (max-width: 1280px) {
+      height: $h_image_main_second;
+    }
+    @media (max-width: 768px) {
+      height: 520px;
+    }
+    @media (max-width: 506px) {
+      height: $h_image_main;
+    }
+    @media (max-width: 326px) {
+      height: $h_image_main_second;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
   .btns {
     margin-bottom: 24px;

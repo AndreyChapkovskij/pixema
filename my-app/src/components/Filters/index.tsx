@@ -105,6 +105,12 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
     setGenreAdded(filter.genres)
   }, [filter])
 
+  useEffect(() => {
+    isFilter
+      ? (document.body.style.overflowY = 'hidden')
+      : (document.body.style.overflowY = 'auto')
+  }, [isFilter])
+
   return (
     <div
       className={
@@ -167,6 +173,7 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
               onClick={(e) => {
                 e.preventDefault()
                 dispatch(setIsFilter(false))
+                setCurrentPage(1)
                 dispatch(clearFilter())
               }}
             >

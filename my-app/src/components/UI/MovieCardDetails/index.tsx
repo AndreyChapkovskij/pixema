@@ -30,8 +30,9 @@ const MovieCardDetails: React.FC<IMovieCardDetailsProps> = ({
         isTheme ? styles.movie__card + ' ' + styles.active : styles.movie__card
       }
     >
-      <Image image={'http://localhost:5000/' + movie.img} title={movie.title} />
-
+      <div className={styles.image}>
+        <img src={'http://localhost:5000/' + movie.img} alt={movie.title} />
+      </div>
       <div className={styles.btns}>
         {favoriteItemsId.find((itemId) => itemId === Number(movie.id)) ? (
           <div

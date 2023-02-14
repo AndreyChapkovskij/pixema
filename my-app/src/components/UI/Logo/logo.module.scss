@@ -1,20 +1,8 @@
 @import '../../../styles/variables.scss';
 
 .logo {
-  // width: 274px;
-  // @media (max-width: 1820px) {
-  //   width: 259px;
-  // }
-  // @media (max-width: 1280px) {
-  //   width: 208px;
-  // }
-  // @media (max-width: 530px) {
-  //   width: auto;
-  // }
   margin: 0 15px;
-  // z-index: 1;
   cursor: pointer;
-  // align-self: flex-start;
   display: flex;
   align-items: center;
   font-size: $s_logo;
@@ -22,7 +10,7 @@
   span:first-child {
     color: $_slate-blue;
   }
-  span.active {
+  span {
     color: $_white;
   }
 }
