@@ -1,5 +1,6 @@
 import styles from './shortSearch.module.scss'
 
+import { useAppSelector } from '../../../../../hooks/redux'
 import { UseFormRegister } from 'react-hook-form'
 
 import Error from '../../error'
@@ -17,9 +18,15 @@ const ShortSearch: React.FC<IYearProps> = ({
   placeholder,
   name,
 }) => {
+  const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
+
   return (
-    <div className={styles.shortSearch}>
-      <span>Full or short movie name</span>
+    <div
+      className={
+        isTheme ? styles.shortSearch + ' ' + styles.active : styles.shortSearch
+      }
+    >
+      <label>Full or short movie name</label>
       <input placeholder={placeholder} {...register(name, {})} />
       {error && <Error error={error} />}
     </div>

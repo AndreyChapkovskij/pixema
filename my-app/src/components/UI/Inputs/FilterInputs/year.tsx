@@ -1,5 +1,6 @@
 import styles from './filterInput.module.scss'
 
+import { useAppSelector } from '../../../../hooks/redux'
 import { UseFormRegister } from 'react-hook-form'
 
 import Error from '../error'
@@ -12,9 +13,11 @@ interface IYearProps {
 }
 
 const Year: React.FC<IYearProps> = ({ register, error, placeholder, name }) => {
+  const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
+
   return (
-    <div className={styles.year}>
-      <span>Years</span>
+    <div className={isTheme ? styles.year + ' ' + styles.active : styles.year}>
+      <label>Years</label>
       <div className={styles.years__input}>
         <input
           placeholder={placeholder[0]}

@@ -38,7 +38,6 @@ const Header: React.FC<IHeaderProps> = ({ fetchWithDebounce, search }) => {
           <div className={styles.search}>
             <input
               type="text"
-              disabled={!fetchWithDebounce}
               onChange={(e) => {
                 fetchWithDebounce && fetchWithDebounce(e)
               }}
@@ -53,7 +52,6 @@ const Header: React.FC<IHeaderProps> = ({ fetchWithDebounce, search }) => {
                 className={styles.search__icon}
                 onClick={() => {
                   dispatch(setIsFilter(true))
-                  // toggleBodyScroll()
                   window.scrollTo(0, 0)
                 }}
               >
@@ -101,7 +99,6 @@ const Header: React.FC<IHeaderProps> = ({ fetchWithDebounce, search }) => {
             className={styles.menu__btn}
             onClick={() => {
               setIsMenu(true)
-              // toggleBodyScroll()
               window.scrollTo(0, 0)
             }}
           >

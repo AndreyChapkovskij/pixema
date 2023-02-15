@@ -164,7 +164,7 @@
 
 .header.active {
   .logo {
-    span {
+    span:last-child {
       color: $_white;
     }
   }

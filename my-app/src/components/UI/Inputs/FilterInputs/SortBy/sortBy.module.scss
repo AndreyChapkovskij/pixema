@@ -2,21 +2,15 @@
 
 .sort {
   padding-bottom: 32px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid $_dim-grey;
+  border-bottom: 1px solid $_light_grey;
+
   .sort__types {
     cursor: pointer;
     display: flex;
     justify-content: stretch;
-    border: 1px solid $_dim-grey;
-    border-radius: 10px;
     overflow: hidden;
-    div.active {
-      background: $_dim-grey;
-      span {
-        color: $_white;
-      }
-    }
+    border: 2px solid $_light-grey;
+    border-radius: 10px;
     div {
       flex-grow: 1;
       text-align: center;
@@ -26,11 +20,35 @@
         z-index: -1;
         opacity: 0;
       }
-
       span {
         font-weight: 600;
         font-size: $s_label;
         line-height: 24px;
+        color: $_black;
+      }
+    }
+    div.active {
+      background: $_light_grey;
+      span {
+        color: $_white;
+      }
+    }
+  }
+}
+
+.sort.active {
+  border-bottom: 1px solid $_dim-grey;
+  .sort__types {
+    background: $_dim-grey;
+    border: 1px solid $_dim-grey;
+    div.active {
+      background: $_light-black;
+      span {
+        color: $_white;
+      }
+    }
+    div {
+      span {
         color: $_grey;
       }
     }

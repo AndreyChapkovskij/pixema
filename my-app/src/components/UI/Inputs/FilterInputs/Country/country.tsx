@@ -2,6 +2,8 @@ import styles from './country.module.scss'
 
 import { Control, Controller } from 'react-hook-form'
 
+import { useAppSelector } from '../../../../../hooks/redux'
+
 import { ICountry } from '../../../../../redux/countrySlice'
 
 import Error from '../../error'
@@ -17,9 +19,15 @@ const Country: React.FC<ICountryProps> = ({ name, countries, control }) => {
   const getValue = (value: string) =>
     value ? countries.find((country) => country.name === value) : []
 
+  const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
+
   return (
-    <div className={styles.country}>
-      <span>Country</span>
+    <div
+      className={
+        isTheme ? styles.country + ' ' + styles.active : styles.country
+      }
+    >
+      <label>Country</label>
       <Controller
         control={control}
         name={name}

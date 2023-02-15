@@ -28,14 +28,33 @@
     @media (max-width: 576px) {
       width: 100vw;
     }
-    background: $_light-black;
+    &.active {
+      & > form > .form_inputs label {
+        color: $_white;
+      }
+      background: $_light-black;
+      .top .title {
+        color: $_white;
+      }
+    }
+    background: $_white;
+
     padding: 48px 40px;
 
-    & > form > div > span {
+    & > form > .form_inputs {
+      margin-bottom: 80px;
+      & > div {
+        margin-bottom: 25px;
+      }
+      & > div:last-child {
+        margin-bottom: 0;
+      }
+    }
+    & > form > .form_inputs label {
       font-weight: 600;
       font-size: $s_label;
       line-height: 24px;
-      color: $_white;
+      color: $_black;
       margin-bottom: 10px;
       display: block;
     }
@@ -49,7 +68,7 @@
         font-size: $s_title_second;
         font-weight: 600;
         line-height: 36px;
-        color: $_white;
+        color: $_black;
       }
       .close {
         cursor: pointer;

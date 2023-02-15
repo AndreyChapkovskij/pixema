@@ -1,17 +1,23 @@
 @import '../../../../../styles/variables.scss';
 
 .shortSearch {
-  margin-bottom: 24px;
   input {
     outline: none;
     border: none;
-    background: $_dim-grey;
     border-radius: 10px;
     font-weight: 500;
     font-size: $s_input;
     line-height: 24px;
     color: $_grey;
+    border: 2px solid $_light_grey;
     width: 100%;
     padding: 8px 20px;
+  }
+}
+
+.shortSearch.active {
+  input {
+    background: $_dim-grey;
+    border: none;
   }
 }

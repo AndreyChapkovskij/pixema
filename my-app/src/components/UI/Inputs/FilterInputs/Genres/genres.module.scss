@@ -1,11 +1,10 @@
 @import '../../../../../styles/variables.scss';
 
 .genres {
-  margin-bottom: 24px;
   .genres__types {
     padding: 12px 20px;
     min-height: 100px;
-    background: $_dim-grey;
+    border: 2px solid $_light-grey;
     border-radius: 10px;
     display: flex;
     align-items: flex-start;
@@ -69,5 +68,12 @@
         }
       }
     }
+  }
+}
+
+.genres.active {
+  .genres__types {
+    border: none;
+    background: $_dim-grey;
   }
 }

@@ -23,6 +23,7 @@ interface IGenresProps {
   setValue: UseFormSetValue<any>
   setFocus: UseFormSetFocus<any>
   watch: UseFormWatch<any>
+  label?: string
 }
 
 const Genres: React.FC<IGenresProps> = ({
@@ -34,6 +35,7 @@ const Genres: React.FC<IGenresProps> = ({
   setValue,
   setFocus,
   watch,
+  label,
 }) => {
   const dispatch = useAppDispatch()
 
@@ -53,9 +55,14 @@ const Genres: React.FC<IGenresProps> = ({
 
   const genresItems = useAppSelector((state) => state.genresReducer.genreItems)
 
+  const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
+
   return (
-    <div className={styles.genres} onClick={() => setFocus(name)}>
-      <span>Sort by</span>
+    <div
+      className={isTheme ? styles.genres + ' ' + styles.active : styles.genres}
+      onClick={() => setFocus(name)}
+    >
+      <label>{label ?? 'Sort by'}</label>
       <div className={styles.genres__types}>
         {genreAdded &&
           genreAdded?.map((genre) => (

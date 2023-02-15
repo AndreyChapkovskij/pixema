@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 import { getErrors } from '../helpers/redux'
 
 interface IMovieCreateState {
@@ -18,9 +18,6 @@ export const fetchMovieCreate = createAsyncThunk<
     const response = await fetch(`http://localhost:5000/api/movies`, {
       method: 'POST',
       mode: 'cors',
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
       body: movie,
     })
 
@@ -37,7 +34,11 @@ export const fetchMovieCreate = createAsyncThunk<
 const createMovieSlice = createSlice({
   name: 'createMovie',
   initialState,
-  reducers: {},
+  reducers: {
+    changeSuccessMessage: (state, action: PayloadAction<string>) => {
+      state.successMessage = action.payload
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchMovieCreate.fulfilled, (state, action) => {
       state.successMessage = 'Your card have been created'
@@ -48,5 +49,7 @@ const createMovieSlice = createSlice({
     })
   },
 })
+
+export const { changeSuccessMessage } = createMovieSlice.actions
 
 export default createMovieSlice.reducer

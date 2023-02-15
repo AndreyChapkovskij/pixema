@@ -1,5 +1,6 @@
 import styles from './filterInput.module.scss'
 
+import { useAppSelector } from '../../../../hooks/redux'
 import { UseFormRegister } from 'react-hook-form'
 
 import Error from '../error'
@@ -17,9 +18,13 @@ const Rating: React.FC<IRatingProps> = ({
   placeholder,
   error,
 }) => {
+  const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
+
   return (
-    <div className={styles.rating}>
-      <span>Rating</span>
+    <div
+      className={isTheme ? styles.rating + ' ' + styles.active : styles.rating}
+    >
+      <label>Rating</label>
       <div className={styles.rating__input}>
         <input
           placeholder={placeholder[0]}

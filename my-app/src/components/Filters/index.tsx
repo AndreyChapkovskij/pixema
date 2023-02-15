@@ -42,6 +42,8 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
 
   const countries = useAppSelector((state) => state.countryReducer.countryItems)
 
+  const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
+
   useEffect(() => {
     !countries.length && dispatch(fetchCountry())
   }, [])
@@ -108,7 +110,13 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
         isFilter ? styles.active + ' ' + styles.filters : styles.filters
       }
     >
-      <div className={styles.filters__wrap}>
+      <div
+        className={
+          isTheme
+            ? styles.filters__wrap + ' ' + styles.active
+            : styles.filters__wrap
+        }
+      >
         <div className={styles.top}>
           <h2 className={styles.title}>Filtres</h2>
           <div
@@ -121,42 +129,44 @@ const Filters: React.FC<IFilterProps> = ({ setCurrentPage, currentPage }) => {
           </div>
         </div>
         <form onSubmit={onSubmitFilter}>
-          <SortBy
-            register={register}
-            name="sortBy"
-            error={errors.sortBy?.message}
-            setValue={setValue}
-            watch={watch}
-          />
-          <ShortSearch
-            register={register}
-            name="shortSearch"
-            placeholder="Your text"
-            error={errors.shortSearch?.message}
-          />
-          <Genres
-            register={register}
-            name="genres"
-            error={errors.genres?.message}
-            genreAdded={genreAdded}
-            setGenreAdded={setGenreAdded}
-            setValue={setValue}
-            setFocus={setFocus}
-            watch={watch}
-          />
-          <Year
-            register={register}
-            placeholder={['From', 'To']}
-            name={['yearFrom', 'yearTo']}
-            error={errors.yearFrom?.message || errors.yearTo?.message}
-          />
-          <Rating
-            register={register}
-            placeholder={['From', 'To']}
-            name={['ratingFrom', 'ratingTo']}
-            error={errors.ratingFrom?.message || errors.ratingTo?.message}
-          />
-          <Country control={control} name="country" countries={countries} />
+          <div className={styles.form_inputs}>
+            <SortBy
+              register={register}
+              name="sortBy"
+              error={errors.sortBy?.message}
+              setValue={setValue}
+              watch={watch}
+            />
+            <ShortSearch
+              register={register}
+              name="shortSearch"
+              placeholder="Your text"
+              error={errors.shortSearch?.message}
+            />
+            <Genres
+              register={register}
+              name="genres"
+              error={errors.genres?.message}
+              genreAdded={genreAdded}
+              setGenreAdded={setGenreAdded}
+              setValue={setValue}
+              setFocus={setFocus}
+              watch={watch}
+            />
+            <Year
+              register={register}
+              placeholder={['From', 'To']}
+              name={['yearFrom', 'yearTo']}
+              error={errors.yearFrom?.message || errors.yearTo?.message}
+            />
+            <Rating
+              register={register}
+              placeholder={['From', 'To']}
+              name={['ratingFrom', 'ratingTo']}
+              error={errors.ratingFrom?.message || errors.ratingTo?.message}
+            />
+            <Country control={control} name="country" countries={countries} />
+          </div>
 
           <div className={styles.btn}>
             <button

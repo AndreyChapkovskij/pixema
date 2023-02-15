@@ -1,43 +1,39 @@
 import styles from './dashboard.module.scss'
 
-import { useAppSelector } from '../../hooks/redux'
+import { useAppSelector, useAppDispatch } from '../../hooks/redux'
 import { useForm } from 'react-hook-form'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, FormEvent } from 'react'
 
+import { motion } from 'framer-motion'
+
+import { fetchCountry } from '../../redux/countrySlice'
+import {
+  fetchMovieCreate,
+  changeSuccessMessage,
+} from '../../redux/createMovieSlice'
+
+import { IGenres } from '../../redux/genresSlice'
+
+import Genres from '../../components/UI/Inputs/FilterInputs/Genres/genres'
+import Country from '../../components/UI/Inputs/FilterInputs/Country/country'
 import Helmet from '../../components/Helmet'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Sidebar from '../../components/Sidebar'
 import Error from '../../components/UI/Inputs/error'
-import Country from '../../components/UI/Inputs/FilterInputs/Country/country'
-
-import { IMovieDetails } from '../../redux/movieDetailsSlice'
-import { IMovieInfo } from '../../redux/movieDetailsSlice'
-import { useAppDispatch } from '../../hooks/redux'
-import { fetchCountry } from '../../redux/countrySlice'
-import { fetchMovieCreate } from '../../redux/createMovieSlice'
-import Genres from '../../components/UI/Inputs/FilterInputs/Genres/genres'
-import { IGenres } from '../../redux/genresSlice'
+import Popup from '../../components/Popup'
 
 interface IMovieInputs {
-  [key: string]: string
-
-  // title: string
-  // rating: string
-  // imdb: string
-  // duration: string
+  title: string
+  rating: string
+  imdb: string
+  duration: string
   img: FileList
-  // description: string
-  // year: string
-  // trends: string
-  // genres: string
-  // country: string
-  // boxoffice: string
-  // production: string
-  // actors: string
-  // director: string
-  // writers: string
-  // released: string
+  description: string
+  year: string
+  trends: string
+  genres: string
+  country: string
 }
 interface IInfo {
   title: string
@@ -56,17 +52,27 @@ function Dashboard() {
 
   const [genreAdded, setGenreAdded] = useState<IGenres[]>([])
 
+  const setIsModal = (arg: boolean): void => {
+    !arg && dispatch(changeSuccessMessage(''))
+  }
+
   useEffect(() => {
     !countries.length && dispatch(fetchCountry())
   }, [])
 
   const [info, setInfo] = useState<IInfo[]>([])
 
-  const handleAddInfo = (): void => {
+  const handleAddInfo = (e: FormEvent): void => {
+    e.preventDefault()
     setInfo([...info, { title: '', description: '', id: Date.now() }])
   }
-  const handleDelInfo = (id: number): void => {
+  const handleDelInfo = (e: FormEvent, id: number): void => {
     setInfo(info.filter((i) => i.id !== id))
+    console.log(id)
+    e.preventDefault()
+  }
+  const changeInfo = (key: string, value: string, id: number) => {
+    setInfo(info.map((i) => (i.id === id ? { ...i, [key]: value } : i)))
   }
 
   const {
@@ -78,7 +84,7 @@ function Dashboard() {
     watch,
     setFocus,
     setError,
-    formState: { errors, isValid },
+    formState: { errors, isValid, isValidating },
   } = useForm<IMovieInputs>({ mode: 'onChange' })
 
   const onSubmitCreate = handleSubmit((createdFormData) => {
@@ -86,7 +92,8 @@ function Dashboard() {
     const country = countries.find(
       (country) => country.name === createdFormData.country
     )
-
+    !country && setError('country', { message: 'This country underfind' })
+    genreAdded.length > 3 && setError('genres', { message: 'Max 3 genres' })
     const form = new FormData()
     form.append('title', createdFormData.title)
     form.append('rating', createdFormData.rating)
@@ -95,25 +102,13 @@ function Dashboard() {
     form.append('duration', createdFormData.duration)
     form.append('genres', `[${genres}]`)
     form.append('description', createdFormData.description)
-    form.append('trends', createdFormData.trends)
+    form.append('trends', createdFormData.trends ? '1' : '0')
     form.append('country', `[${country?.id}]`)
     form.append('year', createdFormData.year)
-    form.append('released', createdFormData.released)
-    form.append('boxoffice', createdFormData.boxoffice)
-    form.append('production', createdFormData.production)
-    form.append('actors', createdFormData.actors)
-    form.append('director', createdFormData.director)
-    form.append('writers', createdFormData.writers)
 
-    const data = {
-      ...createdFormData,
-      country: `[${country?.id}]`,
-      genres: `[${genres}]`,
-      img: createdFormData.img[0],
-    }
+    info && info.map((item) => form.append(item.title, item.description))
 
-    country?.id && dispatch(fetchMovieCreate(form))
-    console.log(data)
+    isValid && dispatch(fetchMovieCreate(form))
   })
 
   return (
@@ -125,63 +120,32 @@ function Dashboard() {
             <Sidebar />
             <section className={styles.dashboard}>
               <h2>Create new movie</h2>
-              <span>{successMessage && successMessage}</span>
-
               <form onSubmit={onSubmitCreate}>
-                <div>
+                <div className={styles.form__inputs}>
                   <input placeholder="title" {...register('title', {})} />
                   {errors.title?.message && (
                     <Error error={errors.title?.message} />
                   )}
                 </div>
-                <div>
-                  <input placeholder="rating" {...register('rating', {})} />
-                  {errors.rating?.message && (
-                    <Error error={errors.rating?.message} />
-                  )}
-                </div>
-                <div>
-                  <input type="file" {...register('img', {})} />
+
+                <div className={styles.form__file}>
+                  <motion.label
+                    whileHover={{ scale: 1.01 }}
+                    htmlFor="fileUpload"
+                  >
+                    <span>
+                      <i className="ri-download-2-fill"></i>
+                    </span>
+                    <span>
+                      {watch('img')?.length
+                        ? `${watch('img').length} files are chosen: ${
+                            watch('img').length === 1 && watch('img')[0].name
+                          }`
+                        : 'Choose your image'}
+                    </span>
+                  </motion.label>
+                  <input type="file" id="fileUpload" {...register('img', {})} />
                   {errors.img?.message && <Error error={errors.img?.message} />}
-                </div>
-                <div>
-                  <input placeholder="imdb" {...register('imdb', {})} />
-                  {errors.imdb?.message && (
-                    <Error error={errors.imdb?.message} />
-                  )}
-                </div>
-                <div>
-                  <input placeholder="duration" {...register('duration', {})} />
-                  {errors.duration?.message && (
-                    <Error error={errors.duration?.message} />
-                  )}
-                </div>
-                <div>
-                  <input
-                    placeholder="description"
-                    {...register('description', {})}
-                  />
-                  {errors.description?.message && (
-                    <Error error={errors.description?.message} />
-                  )}
-                </div>
-                <div>
-                  <input placeholder="year" {...register('year', {})} />
-                  {errors.year?.message && (
-                    <Error error={errors.year?.message} />
-                  )}
-                </div>
-                <div>
-                  <input placeholder="released" {...register('released', {})} />
-                  {errors.released?.message && (
-                    <Error error={errors.released?.message} />
-                  )}
-                </div>
-                <div>
-                  <input placeholder="trends" {...register('trends', {})} />
-                  {errors.trends?.message && (
-                    <Error error={errors.trends?.message} />
-                  )}
                 </div>
                 <Genres
                   register={register}
@@ -192,66 +156,117 @@ function Dashboard() {
                   setValue={setValue}
                   setFocus={setFocus}
                   watch={watch}
+                  label="Genres"
                 />
                 <Country
                   control={control}
                   name="country"
                   countries={countries}
                 />
-                <div>
-                  <input
-                    placeholder="production"
-                    {...register('production', {})}
+                <div className={styles.form__inputs}>
+                  <input placeholder="imdb" {...register('imdb', {})} />
+                  {errors.imdb?.message && (
+                    <Error error={errors.imdb?.message} />
+                  )}
+                </div>
+                <div className={styles.form__inputs}>
+                  <input placeholder="duration" {...register('duration', {})} />
+                  {errors.duration?.message && (
+                    <Error error={errors.duration?.message} />
+                  )}
+                </div>
+                <div className={styles.description}>
+                  <textarea
+                    placeholder="description"
+                    {...register('description', {})}
                   />
-                  {errors.production?.message && (
-                    <Error error={errors.production?.message} />
+                  {errors.description?.message && (
+                    <Error error={errors.description?.message} />
                   )}
                 </div>
-                <div>
-                  <input placeholder="actors" {...register('actors', {})} />
-                  {errors.actors?.message && (
-                    <Error error={errors.actors?.message} />
+                <div className={styles.form__inputs}>
+                  <input placeholder="rating" {...register('rating', {})} />
+                  {errors.rating?.message && (
+                    <Error error={errors.rating?.message} />
                   )}
                 </div>
-                <div>
-                  <input placeholder="director" {...register('director', {})} />
-                  {errors.director?.message && (
-                    <Error error={errors.director?.message} />
+                <div className={styles.form__inputs}>
+                  <input placeholder="year" {...register('year', {})} />
+                  {errors.year?.message && (
+                    <Error error={errors.year?.message} />
                   )}
                 </div>
-                <div>
-                  <input placeholder="writers" {...register('writers', {})} />
-                  {errors.writers?.message && (
-                    <Error error={errors.writers?.message} />
+
+                <div className={styles.form__trends}>
+                  <label
+                    className={
+                      watch('trends')
+                        ? styles.toggle + ' ' + styles.active
+                        : styles.toggle
+                    }
+                    htmlFor="trends"
+                  >
+                    trends
+                  </label>
+                  <input
+                    id="trends"
+                    type={'checkbox'}
+                    placeholder="trends"
+                    {...register('trends', {})}
+                  />
+                  {errors.trends?.message && (
+                    <Error error={errors.trends?.message} />
                   )}
                 </div>
+
                 {info.map((item) => (
-                  <div>
+                  <div className={styles.form__info}>
                     <input
-                      placeholder={item.title}
-                      {...register(item.title, {})}
+                      placeholder="title"
+                      value={item.title}
+                      onChange={(e) =>
+                        changeInfo('title', e.target.value, item.id)
+                      }
                     />
-                    {errors[item.title]?.message && (
-                      <Error error={errors[item.title]?.message} />
-                    )}
+                    <input
+                      placeholder="value"
+                      value={item.description}
+                      onChange={(e) =>
+                        changeInfo('description', e.target.value, item.id)
+                      }
+                    />
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      onClick={(e) => handleDelInfo(e, item.id)}
+                    >
+                      <i className="ri-close-line"></i>
+                    </motion.button>
                   </div>
                 ))}
-                <div>
-                  <input
-                    placeholder="boxoffice"
-                    {...register('boxoffice', {})}
-                  />
-                  {errors.boxoffice?.message && (
-                    <Error error={errors.boxoffice?.message} />
-                  )}
-                </div>
-                <div>
-                  <input type={'submit'} />
-                </div>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  className={styles.form__addInfo}
+                  onClick={(e) => handleAddInfo(e)}
+                >
+                  <i className="ri-add-line"></i>
+                </motion.button>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className={styles.form__submit}
+                >
+                  <input type={'submit'} value="Create" />
+                </motion.div>
               </form>
             </section>
           </div>
         </div>
+        <Popup
+          title={'Server info'}
+          isModal={successMessage}
+          setIsModal={setIsModal}
+        >
+          <span className={styles.successMessage}>{successMessage}</span>
+        </Popup>
       </section>
       <Footer />
     </Helmet>

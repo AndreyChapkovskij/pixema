@@ -10,7 +10,7 @@ import {
   IFilter,
 } from '../../redux/filterSlice'
 
-import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { useAppDispatch } from '../../hooks/redux'
 
 interface IFilterMarksProps {
   filter: IFilter

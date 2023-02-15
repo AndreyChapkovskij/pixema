@@ -2,13 +2,14 @@ import styles from './modal.module.scss'
 
 import { useAppSelector } from '../../hooks/redux'
 import { useEffect } from 'react'
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit'
 
 interface IPopupProps {
   children: React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLAllCollection>,
     HTMLAllCollection
   >
-  isModal: boolean
+  isModal: boolean | string
   setIsModal: (arg: boolean) => void
   title: string
 }
