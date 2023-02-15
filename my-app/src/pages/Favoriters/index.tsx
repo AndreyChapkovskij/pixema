@@ -23,9 +23,6 @@ const Favoriters: React.FC = () => {
   )
 
   const filter = useAppSelector((state) => state.filterReducer.filter)
-  const isFilterWasChanged = useAppSelector(
-    (state) => state.filterReducer.isFilterWasChanged
-  )
 
   const [currentPage, setCurrentPage] = useState(1)
   const [search, setSearch] = useState('')
@@ -41,6 +38,8 @@ const Favoriters: React.FC = () => {
           })
         )
       : setCurrentPage(1)
+
+    setSearch(e.target.value)
   }, 1000)
 
   useEffect(() => {
@@ -54,15 +53,11 @@ const Favoriters: React.FC = () => {
           })
         )
       : dispatch(changeMovieItems([]))
-  }, [isFilterWasChanged, currentPage])
+  }, [filter, currentPage])
 
   return (
     <Helmet title={'Favoriters'}>
-      <Header
-        fetchWithDebounce={fetchWithDebounce}
-        search={search}
-        setSearch={setSearch}
-      />
+      <Header fetchWithDebounce={fetchWithDebounce} search={search} />
       <section>
         <div className="container">
           <div className="wrap">

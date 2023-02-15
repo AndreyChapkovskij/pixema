@@ -1,0 +1,39 @@
+@import '../../../../../styles/variables.scss';
+
+.country {
+  .country__select {
+    & > div {
+      border: 2px solid $_light_grey;
+      border-radius: 10px;
+      outline: none;
+      padding: 0 9px;
+      & > div {
+        & > div {
+          font-weight: 500;
+          font-size: $s_input;
+          color: $_grey;
+          width: 100%;
+          font-family: $font_family;
+          background: none;
+          cursor: pointer;
+        }
+      }
+      div {
+        outline: none;
+        border: none;
+      }
+      span {
+        width: 0;
+      }
+    }
+  }
+}
+
+.active.country {
+  .country__select {
+    & > div {
+      background: $_dim-grey;
+      border: none;
+    }
+  }
+}

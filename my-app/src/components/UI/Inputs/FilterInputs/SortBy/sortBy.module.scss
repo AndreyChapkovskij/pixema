@@ -1,0 +1,56 @@
+@import '../../../../../styles/variables.scss';
+
+.sort {
+  padding-bottom: 32px;
+  border-bottom: 1px solid $_light_grey;
+
+  .sort__types {
+    cursor: pointer;
+    display: flex;
+    justify-content: stretch;
+    overflow: hidden;
+    border: 2px solid $_light-grey;
+    border-radius: 10px;
+    div {
+      flex-grow: 1;
+      text-align: center;
+      padding: 8px;
+      input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+      span {
+        font-weight: 600;
+        font-size: $s_label;
+        line-height: 24px;
+        color: $_black;
+      }
+    }
+    div.active {
+      background: $_light_grey;
+      span {
+        color: $_white;
+      }
+    }
+  }
+}
+
+.sort.active {
+  border-bottom: 1px solid $_dim-grey;
+  .sort__types {
+    background: $_dim-grey;
+    border: 1px solid $_dim-grey;
+    div.active {
+      background: $_light-black;
+      span {
+        color: $_white;
+      }
+    }
+    div {
+      span {
+        color: $_grey;
+      }
+    }
+  }
+}

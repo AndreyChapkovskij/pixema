@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: $_black-translucent;
+
+  &.active {
+    z-index: 1;
+    .wrap {
+      opacity: 1;
+      &.active {
+        background: $_black;
+        .title {
+          h2 {
+            color: $_white;
+          }
+        }
+      }
+    }
+  }
+
+  .wrap {
+    h2 {
+      font-size: $s_title_second;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    border-radius: 20px;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: $_white;
+    padding: 20px 30px;
+    opacity: 0;
+    margin: 0 15px;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      button {
+        margin-left: 15px;
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        i {
+          font-size: $s_icon-close;
+          color: $_grey;
+        }
+      }
+    }
+  }
+}

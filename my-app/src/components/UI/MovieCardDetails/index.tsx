@@ -9,9 +9,13 @@ import Image from '../Image'
 
 interface IMovieCardDetailsProps {
   movie: IMovieDetails
+  setIsModal: (arg: boolean) => void
 }
 
-const MovieCardDetails: React.FC<IMovieCardDetailsProps> = ({ movie }) => {
+const MovieCardDetails: React.FC<IMovieCardDetailsProps> = ({
+  movie,
+  setIsModal,
+}) => {
   const dispatch = useAppDispatch()
 
   const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
@@ -26,8 +30,9 @@ const MovieCardDetails: React.FC<IMovieCardDetailsProps> = ({ movie }) => {
         isTheme ? styles.movie__card + ' ' + styles.active : styles.movie__card
       }
     >
-      <Image image={'http://localhost:5000/' + movie.img} title={movie.title} />
-
+      <div className={styles.image}>
+        <img src={'http://localhost:5000/' + movie.img} alt={movie.title} />
+      </div>
       <div className={styles.btns}>
         {favoriteItemsId.find((itemId) => itemId === Number(movie.id)) ? (
           <div
@@ -45,7 +50,7 @@ const MovieCardDetails: React.FC<IMovieCardDetailsProps> = ({ movie }) => {
           </div>
         )}
 
-        <div className={styles.share}>
+        <div className={styles.share} onClick={() => setIsModal(true)}>
           <i className="ri-share-line"></i>
         </div>
       </div>

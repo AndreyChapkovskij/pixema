@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.accountPage {
+  @include backgroundImage;
+  & > div {
+    z-index: 1;
+    align-self: flex-start;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      align-self: center;
+    }
+  }
+}

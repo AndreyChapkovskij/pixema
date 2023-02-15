@@ -1,0 +1,79 @@
+@import '../../../../../styles/variables.scss';
+
+.genres {
+  .genres__types {
+    padding: 12px 20px;
+    min-height: 100px;
+    border: 2px solid $_light-grey;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .genres__marks {
+      background: $_light-black;
+      border-radius: 6px;
+      padding: 5px;
+      display: inline-block;
+      color: $_white;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      margin: 0 12px 7px 0;
+
+      span {
+        margin-right: 5px;
+      }
+      i {
+        cursor: pointer;
+      }
+    }
+    .genres__search {
+      position: relative;
+      flex-grow: 1;
+      input {
+        border: none;
+        display: block;
+        flex-grow: 1;
+        min-width: 100px;
+        width: 100%;
+        outline: none;
+        background: none;
+        font-weight: 500;
+        font-size: $s_input;
+        line-height: 24px;
+        color: $_grey;
+      }
+      ul {
+        display: none;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: $_white;
+        z-index: 1;
+        li {
+          transition: 0.3s;
+          cursor: pointer;
+          color: $_black;
+          font-size: $s_filter_li;
+          line-height: 22px;
+          font-weight: 700;
+          padding: 10px;
+        }
+        li:hover {
+          background: $_black-hover;
+        }
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.genres.active {
+  .genres__types {
+    border: none;
+    background: $_dim-grey;
+  }
+}

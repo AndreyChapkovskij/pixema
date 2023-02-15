@@ -10,6 +10,7 @@ import registrationReducer from './registrationSlice'
 import resetReducer from './resetSlice'
 import movieDetailsReducer from './movieDetailsSlice'
 import settingsReducer from './settingsSlice'
+import createMovieReducer from './createMovieSlice'
 
 const rootReducer = combineReducers({
   moviesReducer,
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   registrationReducer,
   filterReducer,
   movieDetailsReducer,
+  createMovieReducer,
 })
 
 const store = configureStore({

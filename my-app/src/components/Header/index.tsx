@@ -7,19 +7,14 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 import { setIsFilter } from '../../redux/filterSlice'
 
 import Menu from '../Menu'
-import LogoutLink from '../UI/Links/logoutLink'
 import AccountLinks from '../UI/Links/accountLinks'
+import LogoutLink from '../UI/Links/accountLinks'
 
 interface IHeaderProps {
   fetchWithDebounce?: (e: React.ChangeEvent<HTMLInputElement>) => void
   search?: string
-  setSearch?: (arg: string) => void
 }
-const Header: React.FC<IHeaderProps> = ({
-  fetchWithDebounce,
-  search,
-  setSearch,
-}) => {
+const Header: React.FC<IHeaderProps> = ({ fetchWithDebounce, search }) => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
@@ -27,30 +22,24 @@ const Header: React.FC<IHeaderProps> = ({
   const [isDropDown, setIsDropDown] = useState(false)
 
   const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
-
   const isLoggedIn = useAppSelector((state) => state.userReducer.isLoggedIn)
   const userData = useAppSelector((state) => state.userReducer.userData)
 
   return (
-    <header className={styles.header}>
+    <header
+      className={isTheme ? styles.header + ' ' + styles.active : styles.header}
+    >
       <div className="container">
         <div className={styles.header__wrap}>
           <div className={styles.logo} onClick={() => navigate('/home')}>
             <span>pix</span>
-            <span className={isTheme ? styles.active : ''}>ema</span>
+            <span>ema</span>
           </div>
-          <div
-            className={
-              isTheme ? styles.search + ' ' + styles.active : styles.search
-            }
-          >
+          <div className={styles.search}>
             <input
               type="text"
-              disabled={!fetchWithDebounce}
-              value={search}
               onChange={(e) => {
                 fetchWithDebounce && fetchWithDebounce(e)
-                setSearch && setSearch(e.target.value)
               }}
             />
 
@@ -63,7 +52,6 @@ const Header: React.FC<IHeaderProps> = ({
                 className={styles.search__icon}
                 onClick={() => {
                   dispatch(setIsFilter(true))
-                  // document.body.style.overflow = 'hidden'
                   window.scrollTo(0, 0)
                 }}
               >
@@ -72,22 +60,7 @@ const Header: React.FC<IHeaderProps> = ({
             )}
           </div>
           <div
-            className={styles.menu__btn}
-            onClick={() => {
-              setIsMenu(true)
-              // document.body.style.overflow = 'hidden'
-              window.scrollTo(0, 0)
-            }}
-          >
-            <button>
-              <i className="ri-menu-line"></i>
-            </button>
-          </div>
-          <Menu isMenu={isMenu} setIsMenu={setIsMenu} />
-          <div
-            className={
-              isTheme ? styles.active + ' ' + styles.account : styles.account
-            }
+            className={styles.account}
             onClick={() => setIsDropDown(!isDropDown)}
           >
             {isLoggedIn && userData ? (
@@ -122,6 +95,18 @@ const Header: React.FC<IHeaderProps> = ({
               {isLoggedIn ? <LogoutLink /> : <AccountLinks />}
             </ul>
           </div>
+          <div
+            className={styles.menu__btn}
+            onClick={() => {
+              setIsMenu(true)
+              window.scrollTo(0, 0)
+            }}
+          >
+            <button>
+              <i className="ri-menu-line"></i>
+            </button>
+          </div>
+          <Menu isMenu={isMenu} setIsMenu={setIsMenu} />
         </div>
       </div>
     </header>

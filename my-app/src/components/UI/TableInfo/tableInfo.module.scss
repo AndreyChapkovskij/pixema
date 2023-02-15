@@ -1,0 +1,36 @@
+@import '../../../styles/variables.scss';
+
+.tableInfo {
+  margin-bottom: 48px;
+  width: 100%;
+  padding: 0;
+
+  tbody {
+    tr {
+      display: flex;
+      margin-bottom: 20px;
+      th {
+        color: $_light-grey;
+        min-width: 100px;
+        margin-right: 20px;
+      }
+      td,
+      th {
+        font-weight: 600;
+        font-size: $s_table;
+        line-height: 24px;
+        text-align: left;
+      }
+    }
+    tr:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.active {
+    tbody {
+      td {
+        color: $_white;
+      }
+    }
+  }
+}

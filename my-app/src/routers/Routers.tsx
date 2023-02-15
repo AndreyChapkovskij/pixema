@@ -4,12 +4,13 @@ import { Route, Routes, Navigate } from 'react-router-dom'
 
 import Favoriters from '../pages/Favoriters'
 import Home from '../pages/Home'
-import Login from '../pages/Login'
-import Registration from '../pages/Registration'
-import Reset from '../pages/Reset'
+import Login from '../pages/AccountPages/Login'
+import Registration from '../pages/AccountPages/Registration'
+import Reset from '../pages/AccountPages/Reset'
 import MovieDetails from '../pages/MovieDetails'
 import Settings from '../pages/Settings'
 import Trends from '../pages/Trends'
+import Dashboard from '../pages/Dashboard'
 import ProtectedRoute from './ProtectedRoute'
 
 const Routers: React.FC = () => {
@@ -25,9 +26,11 @@ const Routers: React.FC = () => {
         <Route path=":uid/:token" element={<Reset />} />
       </Route>
       <Route path="/trends" element={<Trends />}></Route>
+      <Route path="dashboard" element={<Dashboard />} />
       <Route path="" element={<ProtectedRoute />}>
         <Route path="settings" element={<Settings />} />
       </Route>
+      {/* <Route path="*" element={<Navigate to="home" />} /> */}
     </Routes>
   )
 }
