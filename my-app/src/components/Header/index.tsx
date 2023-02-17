@@ -8,7 +8,7 @@ import { setIsFilter } from '../../redux/filterSlice'
 
 import Menu from '../Menu'
 import AccountLinks from '../UI/Links/accountLinks'
-import LogoutLink from '../UI/Links/accountLinks'
+import LogoutLink from '../UI/Links/logoutLink'
 
 interface IHeaderProps {
   fetchWithDebounce?: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -73,9 +73,9 @@ const Header: React.FC<IHeaderProps> = ({ fetchWithDebounce, search }) => {
             ) : (
               <div className={styles.name}>
                 <div className={styles.image}>
-                  <span>An</span>
+                  <span>an</span>
                 </div>
-                <span>Anonimus</span>
+                <span>anonimus</span>
               </div>
             )}
             <div className={styles.icon}>

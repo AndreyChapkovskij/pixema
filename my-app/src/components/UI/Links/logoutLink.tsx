@@ -10,7 +10,7 @@ const LogoutLink: React.FC = () => {
   return (
     <li className={styles.link} onClick={() => dispatch(logout())}>
       <i className="ri-logout-circle-fill"></i>
-      <span>Logout</span>
+      <span>logout</span>
     </li>
   )
 }

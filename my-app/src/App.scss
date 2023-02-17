@@ -49,6 +49,9 @@ body {
   align-items: center;
 }
 .error {
+  &::first-letter {
+    text-transform: uppercase;
+  }
   color: $_red;
   font-size: $s_span;
 }

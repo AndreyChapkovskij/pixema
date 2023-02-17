@@ -49,7 +49,7 @@ function MovieDetails() {
           <div className="wrap">
             <Sidebar />
             {movie ? (
-              <section className={styles.movie}>
+              <div className={styles.movie}>
                 <MovieCardDetails movie={movie} setIsModal={setIsModal} />
                 <div className={styles.movie__info}>
                   <Genres genres={movie.genres} />
@@ -72,7 +72,7 @@ function MovieDetails() {
                   <TableInfo movie={movie} />
                   <Recommendations moviesRecommend={moviesRecommend} />
                 </div>
-              </section>
+              </div>
             ) : (
               <NotFound />
             )}

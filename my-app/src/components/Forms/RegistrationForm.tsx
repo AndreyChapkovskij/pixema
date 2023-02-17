@@ -48,8 +48,8 @@ const RegistrationForm: React.FC = () => {
     } else {
       setValue('confirmPassword', '')
       setValue('password', '')
-      setError('confirmPassword', { message: "Passwords don't match" })
-      setError('password', { message: "Passwords don't match" })
+      setError('confirmPassword', { message: "passwords don't match" })
+      setError('password', { message: "passwords don't match" })
     }
   })
 
@@ -75,7 +75,7 @@ const RegistrationForm: React.FC = () => {
         <Password
           register={register}
           name="confirmPassword"
-          label="Confirm password"
+          label="confirm password"
           placeholder="Confirm password"
           error={errors.confirmPassword?.message}
         />
@@ -83,8 +83,8 @@ const RegistrationForm: React.FC = () => {
 
       <Submit isValid={isValid} value={'Sign Up'} />
       <div className={styles.signLink}>
-        <span>Already have an account?</span>
-        <span onClick={() => navigate('/login')}>Sign In</span>
+        <span>already have an account?</span>
+        <span onClick={() => navigate('/login')}>sign in</span>
       </div>
     </form>
   )

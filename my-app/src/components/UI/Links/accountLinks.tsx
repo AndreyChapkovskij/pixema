@@ -8,13 +8,13 @@ const AccountLinks: React.FC = () => {
       <li className={styles.accountLink + ' ' + styles.link}>
         <Link to="/registration">
           <i className="ri-user-add-fill"></i>
-          <span>Sign Up</span>
+          <span>sign up</span>
         </Link>
       </li>
       <li className={styles.accountLink + ' ' + styles.link}>
         <Link to="/login">
           <i className="ri-login-circle-fill"></i>
-          <span>Sign In</span>
+          <span>sign in</span>
         </Link>
       </li>
     </>

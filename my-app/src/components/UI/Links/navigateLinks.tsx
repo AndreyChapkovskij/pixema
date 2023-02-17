@@ -2,7 +2,10 @@ import styles from './links.module.scss'
 
 import { NavLink } from 'react-router-dom'
 
+import { useAppSelector } from '../../../hooks/redux'
+
 const NavigateLinks: React.FC = () => {
+  const isLoggedIn = useAppSelector((state) => state.userReducer.isLoggedIn)
   return (
     <>
       <li className={styles.link}>
@@ -11,7 +14,7 @@ const NavigateLinks: React.FC = () => {
           className={({ isActive }) => (isActive ? styles.active : '')}
         >
           <i className="ri-home-6-fill"></i>
-          <span>Home</span>
+          <span>home</span>
         </NavLink>
       </li>
       <li className={styles.link}>
@@ -20,7 +23,7 @@ const NavigateLinks: React.FC = () => {
           className={({ isActive }) => (isActive ? styles.active : '')}
         >
           <i className="ri-fire-fill"></i>
-          <span>Trends</span>
+          <span>trends</span>
         </NavLink>
       </li>
       <li className={styles.link}>
@@ -29,7 +32,7 @@ const NavigateLinks: React.FC = () => {
           className={({ isActive }) => (isActive ? styles.active : '')}
         >
           <i className="ri-bookmark-fill"></i>
-          <span>Favorites</span>
+          <span>favorites</span>
         </NavLink>
       </li>
       <li className={styles.link}>
@@ -38,9 +41,20 @@ const NavigateLinks: React.FC = () => {
           className={({ isActive }) => (isActive ? styles.active : '')}
         >
           <i className="ri-settings-5-fill"></i>
-          <span>Settings</span>
+          <span>settings</span>
         </NavLink>
       </li>
+      {isLoggedIn && (
+        <li className={styles.link}>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) => (isActive ? styles.active : '')}
+          >
+            <i className="ri-add-circle-fill"></i>
+            <span>dashboard</span>
+          </NavLink>
+        </li>
+      )}
     </>
   )
 }

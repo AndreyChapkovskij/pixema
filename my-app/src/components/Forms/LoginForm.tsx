@@ -58,12 +58,12 @@ const LoginForm: React.FC = () => {
           error={errors.password?.message}
         />
       </div>
-      <span onClick={() => navigate('/reset')}>Forgot password?</span>
+      <span onClick={() => navigate('/reset')}>forgot password?</span>
 
-      <Submit isValid={isValid} value="Sign in" />
+      <Submit isValid={isValid} value="Sign In" />
       <div className={styles.signLink}>
-        <span>Don’t have an account? </span>
-        <span onClick={() => navigate('/registration')}>Sign Up</span>
+        <span>don’t have an account? </span>
+        <span onClick={() => navigate('/registration')}>sign up</span>
       </div>
     </form>
   )
