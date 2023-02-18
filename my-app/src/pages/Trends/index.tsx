@@ -6,6 +6,7 @@ import { fetchMoviesTrends } from '../../redux/moviesSlice'
 import useDebounce from '../../hooks/useDebounce'
 
 import MoviesList from '../../components/MoviesList'
+import FilterMarks from '../../components/FilterMarks'
 import Sidebar from '../../components/Sidebar'
 import Filters from '../../components/Filters'
 import Header from '../../components/Header'
@@ -37,12 +38,12 @@ const Trends: React.FC = () => {
   return (
     <Helmet title={'Trends'}>
       <Header fetchWithDebounce={fetchWithDebounce} search={search} />
+      <FilterMarks setCurrentPage={setCurrentPage} filter={filter} />
       <section>
         <div className="container">
           <div className="wrap">
             <Sidebar />
             <MoviesList
-              filter={filter}
               setCurrentPage={setCurrentPage}
               currentPage={currentPage}
               search={search}
