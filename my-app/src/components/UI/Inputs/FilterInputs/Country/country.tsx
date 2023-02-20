@@ -4,7 +4,7 @@ import { Control, Controller } from 'react-hook-form'
 
 import { useAppSelector } from '../../../../../hooks/redux'
 
-import { ICountry } from '../../../../../redux/countrySlice'
+import { ICountry } from '../../../../../interface.app'
 
 import Error from '../../error'
 import ReactSelect from 'react-select'

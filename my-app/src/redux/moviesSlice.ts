@@ -1,24 +1,9 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 
-import { ICountry } from './countrySlice'
-import { IGenres } from './genresSlice'
-import { IFilter } from './filterSlice'
+import { IFilter } from '../interface.app'
+import { IMovieItem } from '../interface.app'
 
 import { getQueryString } from '../helpers/redux'
-
-export interface IMovieItem {
-  id: number
-  title: string
-  rating: string
-  img: string
-  imdb: string
-  duration: number
-  description: string
-  year: number
-  trends: number
-  genres: IGenres[]
-  country: ICountry[]
-}
 
 interface IMovieResponse {
   count: number
@@ -30,7 +15,7 @@ interface IMovieResponse {
 interface IMoviesParams {
   filter: IFilter
   currentPage: number
-  search: string
+  search?: string
   favoriteItemsId?: number[]
 }
 
@@ -77,12 +62,11 @@ export const fetchMoviesTrends = createAsyncThunk<
   IMovieResponse,
   IMoviesParams,
   { rejectValue: string }
->('movies/trends', async ({ filter, currentPage, search }, thunkAPI) => {
+>('movies/trends', async ({ filter, currentPage }, thunkAPI) => {
   try {
     const response = await fetch(
       `http://localhost:5000/api/movies?trends=1&page=${currentPage}${getQueryString(
-        filter,
-        search
+        filter
       )}`
     )
 
@@ -104,12 +88,12 @@ export const fetchMoviesFavoriters = createAsyncThunk<
   { rejectValue: string }
 >(
   'movies/favorites',
-  async ({ filter, currentPage, search, favoriteItemsId }, thunkAPI) => {
+  async ({ filter, currentPage, favoriteItemsId }, thunkAPI) => {
     try {
       const response = await fetch(
         `http://localhost:5000/api/movies?&page=${currentPage}${getQueryString(
           filter,
-          search,
+          '',
           favoriteItemsId
         )}`
       )
@@ -130,6 +114,9 @@ const moviesSlice = createSlice({
   name: 'movies',
   initialState,
   reducers: {
+    changeFavorite: (state, action: PayloadAction<number[]>) => {
+      state.favoriteItemsId = action.payload
+    },
     addFavorite: (state, action: PayloadAction<number>) => {
       state.favoriteItemsId = [...state.favoriteItemsId, action.payload]
       localStorage.setItem(
@@ -205,7 +192,7 @@ const moviesSlice = createSlice({
   },
 })
 
-export const { addFavorite, delFavorite, changeMovieItems } =
+export const { addFavorite, delFavorite, changeMovieItems, changeFavorite } =
   moviesSlice.actions
 
 export default moviesSlice.reducer

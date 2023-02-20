@@ -3,7 +3,7 @@ import styles from './movieCard.module.scss'
 import { useNavigate } from 'react-router-dom'
 import { useAppSelector } from '../../../hooks/redux'
 
-import { IMovieItem } from '../../../redux/moviesSlice'
+import { IMovieItem } from '../../../interface.app'
 
 import Genres from '../../UI/Genres'
 import Image from '../Image'

@@ -1,8 +1,8 @@
-import { IFilter } from '../redux/filterSlice'
+import { IFilter } from '../interface.app'
 
 export const getQueryString = (
   filter: IFilter,
-  search: string,
+  search?: string,
   favoriteItemsId?: number[]
 ): string => {
   let queryString: string[] = []

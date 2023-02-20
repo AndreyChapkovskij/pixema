@@ -1,6 +1,6 @@
 import styles from './genres.module.scss'
 
-import { IGenres } from '../../../redux/genresSlice'
+import { IGenres } from '../../../interface.app'
 
 interface IGenresProps {
   genres: IGenres[]

@@ -11,6 +11,7 @@ import resetReducer from './resetSlice'
 import movieDetailsReducer from './movieDetailsSlice'
 import settingsReducer from './settingsSlice'
 import createMovieReducer from './createMovieSlice'
+import searchReducer from './searchSlice'
 
 const rootReducer = combineReducers({
   moviesReducer,
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   filterReducer,
   movieDetailsReducer,
   createMovieReducer,
+  searchReducer,
 })
 
 const store = configureStore({

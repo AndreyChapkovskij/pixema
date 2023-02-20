@@ -13,7 +13,7 @@ import 'swiper/css'
 import Image from '../../components/UI/Image'
 import Genres from '../../components/UI/Genres'
 
-import { IMovieItem } from '../../redux/moviesSlice'
+import { IMovieItem } from '../../interface.app'
 
 interface IRecommendedProps {
   moviesRecommend: IMovieItem[]

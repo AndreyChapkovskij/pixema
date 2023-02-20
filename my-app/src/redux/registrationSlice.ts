@@ -2,15 +2,8 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 
 import { getErrors } from '../helpers/redux'
 
-export interface IRegistration {
-  username: string
-  email: string
-  password: string
-}
-export interface IToken {
-  uid: string
-  token: string
-}
+import { IRegistration } from '../interface.app'
+import { IToken } from '../interface.app'
 
 interface IRegistrationState {
   errMessage: string | undefined

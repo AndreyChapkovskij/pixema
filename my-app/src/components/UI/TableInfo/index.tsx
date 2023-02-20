@@ -1,6 +1,6 @@
 import styles from './tableInfo.module.scss'
 
-import { IMovieDetails } from '../../../redux/movieDetailsSlice'
+import { IMovieDetails } from '../../../interface.app'
 
 import { useAppSelector } from '../../../hooks/redux'
 

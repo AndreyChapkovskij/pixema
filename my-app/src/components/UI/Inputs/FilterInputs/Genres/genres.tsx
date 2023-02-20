@@ -11,7 +11,7 @@ import { useAppSelector, useAppDispatch } from '../../../../../hooks/redux'
 import { fetchGenres, clearGenres } from '../../../../../redux/genresSlice'
 
 import Error from '../../error'
-import { IGenres } from '../../../../../redux/genresSlice'
+import { IGenres } from '../../../../../interface.app'
 import { useEffect } from 'react'
 
 interface IGenresProps {

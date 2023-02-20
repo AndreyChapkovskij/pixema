@@ -8,11 +8,15 @@
 
 .marks {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 10px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   width: 100%;
-  overflow-x: auto;
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: auto;
+  }
 
   li {
     display: flex;

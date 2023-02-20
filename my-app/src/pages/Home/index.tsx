@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 
-import useDebounce from '../../hooks/useDebounce'
-
 import { fetchMovies } from '../../redux/moviesSlice'
+import { changeSearch } from '../../redux/searchSlice'
 
 import MoviesList from '../../components/MoviesList'
-import FilterMarks from '../../components/FilterMarks'
 import Sidebar from '../../components/Sidebar'
 import Filters from '../../components/Filters'
 import Header from '../../components/Header'
@@ -17,28 +15,23 @@ const Home: React.FC = () => {
   const dispatch = useAppDispatch()
 
   const [currentPage, setCurrentPage] = useState(1)
-  const [search, setSearch] = useState('')
 
+  const search = useAppSelector((state) => state.searchReducer.search)
   const filter = useAppSelector((state) => state.filterReducer.filter)
-
-  const fetchWithDebounce = useDebounce((e) => {
-    currentPage === 1
-      ? dispatch(
-          fetchMovies({ filter, currentPage: 1, search: e.target.value })
-        )
-      : setCurrentPage(1)
-
-    setSearch(e.target.value)
-  }, 1000)
 
   useEffect(() => {
     dispatch(fetchMovies({ filter, currentPage, search }))
-  }, [filter, currentPage])
+  }, [filter, currentPage, search])
+
+  useEffect(() => {
+    return () => {
+      dispatch(changeSearch(''))
+    }
+  }, [])
 
   return (
     <Helmet title={'Home'}>
-      <Header fetchWithDebounce={fetchWithDebounce} search={search} />
-      <FilterMarks setCurrentPage={setCurrentPage} filter={filter} />
+      <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
       <section>
         <div className="container">
           <div className="wrap">

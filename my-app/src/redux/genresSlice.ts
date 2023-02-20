@@ -1,9 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-export interface IGenres {
-  id: number
-  name: string
-}
+import { IGenres } from '../interface.app'
+
 interface IGenresParams {
   genreValue: string
   genreAdded?: IGenres[]

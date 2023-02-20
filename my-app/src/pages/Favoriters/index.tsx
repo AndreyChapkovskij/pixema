@@ -6,10 +6,7 @@ import {
   fetchMoviesFavoriters,
 } from '../../redux/moviesSlice'
 
-import useDebounce from '../../hooks/useDebounce'
-
 import Sidebar from '../../components/Sidebar'
-import FilterMarks from '../../components/FilterMarks'
 import MoviesList from '../../components/MoviesList'
 import Filters from '../../components/Filters'
 import Header from '../../components/Header'
@@ -24,24 +21,9 @@ const Favoriters: React.FC = () => {
   )
 
   const filter = useAppSelector((state) => state.filterReducer.filter)
+  const search = useAppSelector((state) => state.searchReducer.search)
 
   const [currentPage, setCurrentPage] = useState(1)
-  const [search, setSearch] = useState('')
-
-  const fetchWithDebounce = useDebounce((e) => {
-    currentPage === 1 && favoriteItemsId && favoriteItemsId[0]
-      ? dispatch(
-          fetchMoviesFavoriters({
-            filter,
-            currentPage: 1,
-            search: e.target.value,
-            favoriteItemsId,
-          })
-        )
-      : setCurrentPage(1)
-
-    setSearch(e.target.value)
-  }, 1000)
 
   useEffect(() => {
     favoriteItemsId && favoriteItemsId[0]
@@ -49,7 +31,6 @@ const Favoriters: React.FC = () => {
           fetchMoviesFavoriters({
             filter,
             currentPage,
-            search,
             favoriteItemsId,
           })
         )
@@ -58,9 +39,7 @@ const Favoriters: React.FC = () => {
 
   return (
     <Helmet title={'Favoriters'}>
-      <Header fetchWithDebounce={fetchWithDebounce} search={search} />
-      <FilterMarks setCurrentPage={setCurrentPage} filter={filter} />
-
+      <Header />
       <section>
         <div className="container">
           <div className="wrap">

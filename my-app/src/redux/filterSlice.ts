@@ -1,14 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { IGenres } from './genresSlice'
 
-export interface IFilter {
-  genres: IGenres[]
-  sortBy: string
-  shortSearch: string
-  groupByYear: [string, string]
-  groupByRating: [string, string]
-  country: string
-}
+import { IGenres } from '../interface.app'
+import { IFilter } from '../interface.app'
 
 interface IFilterState {
   isFilter: boolean

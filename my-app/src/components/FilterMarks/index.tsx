@@ -7,21 +7,18 @@ import {
   changeGroupByYear,
   changeShortSearch,
   changeSortBy,
-  IFilter,
 } from '../../redux/filterSlice'
 
-import { useAppDispatch } from '../../hooks/redux'
+import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 
 interface IFilterMarksProps {
-  filter: IFilter
   setCurrentPage: (arg: number) => void
 }
 
-const FilterMarks: React.FC<IFilterMarksProps> = ({
-  filter,
-  setCurrentPage,
-}) => {
+const FilterMarks: React.FC<IFilterMarksProps> = ({ setCurrentPage }) => {
   const dispatch = useAppDispatch()
+
+  const filter = useAppSelector((state) => state.filterReducer.filter)
 
   return (
     <section>

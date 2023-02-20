@@ -2,12 +2,13 @@ import styles from './filters.module.scss'
 
 import { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { useForm } from 'react-hook-form'
 
-import { fetchGenres, clearGenres, IGenres } from '../../redux/genresSlice'
+import { fetchGenres, clearGenres } from '../../redux/genresSlice'
 import { fetchCountry } from '../../redux/countrySlice'
 import { setIsFilter, clearFilter, changeFilter } from '../../redux/filterSlice'
 
-import { useForm } from 'react-hook-form'
+import { IGenres } from '../../interface.app'
 
 import Year from '../UI/Inputs/FilterInputs/year'
 import Rating from '../UI/Inputs/FilterInputs/rating'

@@ -2,11 +2,7 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 
 import { getErrors } from '../helpers/redux'
 
-interface IUser {
-  uid: string
-  token: string
-  new_password: string
-}
+import { IUserReset } from '../interface.app'
 
 interface IResetState {
   errMessage: string | undefined
@@ -50,7 +46,7 @@ export const fetchResetPassword = createAsyncThunk<
 // Reset confirm
 export const fetchResetConfirm = createAsyncThunk<
   undefined,
-  IUser,
+  IUserReset,
   { rejectValue: string }
 >('user/confirm', async (user, thunkAPI) => {
   try {

@@ -42,6 +42,7 @@ const App: React.FC = () => {
       dispatch(changeIsTheme())
     }
   }, [])
+
   return (
     <div className={isTheme ? 'App active' : 'App'}>
       <Routers />

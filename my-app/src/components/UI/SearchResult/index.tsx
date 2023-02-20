@@ -17,7 +17,7 @@ const SearchResult: React.FC<ISearchResultProps> = ({ search }) => {
           : styles.searchResult
       }
     >
-      Результаты по запросу: {search}
+      Searching results: {search}
     </h3>
   )
 }

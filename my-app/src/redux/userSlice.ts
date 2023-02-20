@@ -2,15 +2,8 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 
 import { getErrors } from '../helpers/redux'
 
-interface IUserTokens {
-  access: string
-  refresh: string
-}
-interface IUserData {
-  username?: string
-  id?: number
-  email?: string
-}
+import { IUserTokens } from '../interface.app'
+import { IUserData } from '../interface.app'
 
 interface IUserState {
   userData: IUserData

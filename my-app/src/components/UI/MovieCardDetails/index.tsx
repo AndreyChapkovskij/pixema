@@ -2,7 +2,7 @@ import styles from './movieCardDetails.module.scss'
 
 import { useAppSelector, useAppDispatch } from '../../../hooks/redux'
 
-import { IMovieDetails } from '../../../redux/movieDetailsSlice'
+import { IMovieDetails } from '../../../interface.app'
 import { addFavorite, delFavorite } from '../../../redux/moviesSlice'
 
 import Image from '../Image'

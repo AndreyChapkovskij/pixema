@@ -1,14 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-import { IMovieItem } from './moviesSlice'
-
-export interface IMovieInfo {
-  [key: string]: string
-}
-
-export interface IMovieDetails extends IMovieItem {
-  info: IMovieInfo
-}
+import { IMovieItem } from '../interface.app'
+import { IMovieDetails } from '../interface.app'
 
 interface IMovieDetailsState {
   movieItem: IMovieDetails | null

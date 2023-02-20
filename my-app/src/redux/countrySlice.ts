@@ -1,9 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-export interface ICountry {
-  id: number
-  name: string
-}
+import { ICountry } from '../interface.app'
 
 interface ICountryState {
   countryItems: ICountry[]

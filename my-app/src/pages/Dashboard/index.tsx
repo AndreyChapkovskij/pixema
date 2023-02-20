@@ -12,7 +12,7 @@ import {
   changeSuccessMessage,
 } from '../../redux/createMovieSlice'
 
-import { IGenres } from '../../redux/genresSlice'
+import { IGenres } from '../../interface.app'
 
 import Genres from '../../components/UI/Inputs/FilterInputs/Genres/genres'
 import Country from '../../components/UI/Inputs/FilterInputs/Country/country'

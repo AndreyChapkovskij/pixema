@@ -4,9 +4,10 @@ import { useAppSelector } from '../../hooks/redux'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
+import NotFound from '../NotFound'
+import FilterMarks from '../FilterMarks'
 import MovieCard from '../UI/MovieCard'
 import SearchResult from '../UI/SearchResult'
-import NotFound from '../NotFound'
 import Spinner from '../UI/Icons/Spinner'
 
 interface IMovieListProps {
@@ -41,6 +42,7 @@ const MoviesList: React.FC<IMovieListProps> = ({
   return (
     <div className={styles.movieList}>
       {search && <SearchResult search={search} />}
+      <FilterMarks setCurrentPage={setCurrentPage} />
 
       {movies.length ? (
         <>
