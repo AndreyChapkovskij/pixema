@@ -2,21 +2,18 @@
 
 .marks::-webkit-scrollbar {
   width: 0;
+  height: 0;
   background: transparent;
 }
 
 .marks {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 15px;
+  margin-bottom: 10px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  width: 100%;
+  overflow-x: auto;
 
-  @media (max-width: 700px) {
-    max-width: calc(100vw - 30px);
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
   li {
     display: flex;
     align-items: center;

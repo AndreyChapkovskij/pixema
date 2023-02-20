@@ -2,6 +2,9 @@
 
 .formInput {
   label {
+    &::first-letter {
+      text-transform: uppercase;
+    }
     display: block;
     font-weight: 600;
     font-size: $s_label;

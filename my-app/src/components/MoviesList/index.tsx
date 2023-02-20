@@ -4,9 +4,6 @@ import { useAppSelector } from '../../hooks/redux'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import { IFilter } from '../../redux/filterSlice'
-
-import FilterMarks from '../FilterMarks'
 import MovieCard from '../UI/MovieCard'
 import SearchResult from '../UI/SearchResult'
 import NotFound from '../NotFound'
@@ -15,14 +12,12 @@ import Spinner from '../UI/Icons/Spinner'
 interface IMovieListProps {
   setCurrentPage: (arg: number) => void
   currentPage: number
-  filter: IFilter
   search: string
 }
 
 const MoviesList: React.FC<IMovieListProps> = ({
   setCurrentPage,
   currentPage,
-  filter,
   search,
 }) => {
   const loading = useAppSelector((state) => state.moviesReducer.loading)
@@ -46,8 +41,6 @@ const MoviesList: React.FC<IMovieListProps> = ({
   return (
     <div className={styles.movieList}>
       {search && <SearchResult search={search} />}
-
-      <FilterMarks filter={filter} setCurrentPage={setCurrentPage} />
 
       {movies.length ? (
         <>

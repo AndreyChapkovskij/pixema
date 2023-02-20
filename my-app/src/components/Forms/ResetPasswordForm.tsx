@@ -37,13 +37,13 @@ const ResetPasswordForm: React.FC = () => {
       onSubmit={onSubmitResetPassword}
       className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
     >
-      <h2>Reset password</h2>
+      <h2>reset password</h2>
       {resetMessage ? (
         <span className={styles.success}>{resetMessage}</span>
       ) : (
         watch('email') && (
           <span className={styles.emailMessage}>
-            You will receive an email {watch('email')} with a link to reset your
+            you will receive an email {watch('email')} with a link to reset your
             password!
           </span>
         )

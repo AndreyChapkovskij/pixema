@@ -9,6 +9,7 @@ import {
 import useDebounce from '../../hooks/useDebounce'
 
 import Sidebar from '../../components/Sidebar'
+import FilterMarks from '../../components/FilterMarks'
 import MoviesList from '../../components/MoviesList'
 import Filters from '../../components/Filters'
 import Header from '../../components/Header'
@@ -58,12 +59,13 @@ const Favoriters: React.FC = () => {
   return (
     <Helmet title={'Favoriters'}>
       <Header fetchWithDebounce={fetchWithDebounce} search={search} />
+      <FilterMarks setCurrentPage={setCurrentPage} filter={filter} />
+
       <section>
         <div className="container">
           <div className="wrap">
             <Sidebar />
             <MoviesList
-              filter={filter}
               setCurrentPage={setCurrentPage}
               currentPage={currentPage}
               search={search}

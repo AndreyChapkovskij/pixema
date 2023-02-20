@@ -50,6 +50,9 @@
     margin-bottom: 40px;
   }
   & > span {
+    &::first-letter {
+      text-transform: uppercase;
+    }
     display: block;
     margin-bottom: 5px;
     font-size: $s_span;
@@ -62,6 +65,9 @@
 
 .signLink {
   text-align: center;
+  &::first-letter {
+    text-transform: uppercase;
+  }
   span {
     font-weight: 500;
     font-size: $s_span;
