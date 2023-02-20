@@ -1,6 +1,6 @@
 const { Op } = require('sequelize')
 
-const { Movies } = require('../models/models')
+const { Movies, Genres } = require('../models/models')
 
 class SearchController {
   async getAll(req, res) {
@@ -9,7 +9,7 @@ class SearchController {
     let movies
 
     page = page || 1
-    limit = limit || 8
+    limit = limit || 6
 
     let offset = page * limit - limit
     if (search) {
@@ -25,12 +25,28 @@ class SearchController {
         },
         limit,
         offset,
+        include: [
+          {
+            model: Genres,
+            attributes: { exclude: ['createdAt', 'updatedAt'] },
+            through: { attributes: [] },
+            as: 'genres',
+          },
+        ],
       })
     } else {
       movies = await Movies.findAll({
         attributes: { exclude: ['createdAt', 'updatedAt'] },
         limit,
         offset,
+        include: [
+          {
+            model: Genres,
+            attributes: { exclude: ['createdAt', 'updatedAt'] },
+            through: { attributes: [] },
+            as: 'genres',
+          },
+        ],
       })
     }
 
