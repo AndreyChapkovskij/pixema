@@ -1,0 +1,44 @@
+@import '../../../styles/variables.scss';
+
+.image {
+  height: $h_image_main;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  position: relative;
+  @media (max-width: 1280px) {
+    height: $h_image_main_second;
+  }
+  @media (max-width: 768px) {
+    height: $h_image_main;
+  }
+  @media (max-width: 622px) {
+    height: $h_image_main_second;
+  }
+  @media (max-width: 506px) {
+    height: $h_image_main;
+  }
+  @media (max-width: 326px) {
+    height: $h_image_main_second;
+  }
+  .rating {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 2px 8px;
+    background: $_green;
+    border-radius: 6px;
+    span {
+      font-weight: 600;
+      font-size: $s_span;
+      line-height: 24px;
+      color: $_white;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

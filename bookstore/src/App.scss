@@ -1,0 +1,62 @@
+@import './styles/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  font-size: $main_size;
+  @media (max-width: 1199px) {
+    font-size: $tablet_size;
+  }
+  @media (max-width: 767px) {
+    font-size: $mobile_size;
+  }
+}
+body {
+  font-family: $font_family;
+}
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $_white;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+  @media (max-width: 1280px) {
+    max-width: 952px;
+  }
+  @media (max-width: 990px) {
+    max-width: 714px;
+  }
+}
+.wrap {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.error {
+  color: $_red;
+  font-size: $s_error;
+}
+.success {
+  color: $_green;
+  font-size: $s_span;
+}
+h1 {
+  font-stretch: $stretch_second;
+  font-weight: 700;
+  font-size: $s_title_main;
+  line-height: 64px;
+  color: $_dim-grey;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}

@@ -1,0 +1,10 @@
+@import '../../../styles/variables.scss';
+
+.logo {
+  cursor: pointer;
+  color: $_dim-grey;
+  font-size: $s_logo;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-stretch: $stretch_second;
+}

@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.header {
+  .header__wrap {
+    & > div:nth-child(2) {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    & > div:nth-child(1) {
+      @media (max-width: 360px) {
+        display: none;
+      }
+    }
+    @media (max-width: 360px) {
+      justify-content: flex-end;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid $_white-grey;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    div {
+      margin-left: 30px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  & > div > div > div {
+    margin-left: 30px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

@@ -32,6 +32,7 @@ function MovieDetails() {
       dispatch(fetchMovieById(id))
       dispatch(fetchMoviesRecommend())
     }
+    window.scrollTo(0, 0)
   }, [id])
 
   const movie = useAppSelector((state) => state.movieDetailsReducer.movieItem)

@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+
+.pagination {
+  padding: 48px 0 72px;
+  .pagination__arrow {
+    cursor: pointer;
+    margin: 0 15px;
+    display: flex;
+    font-weight: 700;
+    font-size: $s_span;
+    line-height: 24px;
+    color: $_light-grey;
+    &.active {
+      span {
+        color: $_dim-grey;
+      }
+    }
+
+    &:first-child {
+      span {
+        margin-left: 8px;
+      }
+    }
+    &:last-child {
+      span {
+        margin-right: 8px;
+      }
+    }
+  }
+  ul {
+    margin: 0 15px;
+    display: flex;
+    li {
+      span {
+        margin-right: 32px;
+      }
+      &.active {
+        color: $_dim-grey;
+      }
+      cursor: pointer;
+      font-style: normal;
+      font-weight: 700;
+      font-size: $s_span;
+      line-height: 24px;
+      color: $_light-grey;
+      margin-right: 32px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  // display: flex;
+  // justify-content: space-between;
+  // ul {
+  //   display: flex;
+  // }
+}

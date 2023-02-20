@@ -60,6 +60,14 @@ function Dashboard() {
     !countries.length && dispatch(fetchCountry())
   }, [])
 
+  useEffect(() => {
+    if (successMessage) {
+      reset()
+      setGenreAdded([])
+      setInfo([])
+    }
+  }, [successMessage])
+
   const [info, setInfo] = useState<IInfo[]>([])
 
   const handleAddInfo = (e: FormEvent): void => {
@@ -80,6 +88,7 @@ function Dashboard() {
     register,
     handleSubmit,
     setValue,
+    reset,
     getValues,
     watch,
     setFocus,

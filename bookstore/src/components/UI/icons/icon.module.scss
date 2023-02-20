@@ -1,0 +1,43 @@
+@import '../../../styles/variables.scss';
+
+.icon {
+  transition: 0.3s transform;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+  i {
+    font-size: $s_icon;
+    color: $_light-black;
+  }
+}
+.mobile_menu {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+.account,
+.favorites {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.cart {
+  position: relative;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    font-size: 12px;
+    background: $_dim-grey;
+    color: $_white;
+    width: 25px;
+    height: 25px;
+  }
+}
