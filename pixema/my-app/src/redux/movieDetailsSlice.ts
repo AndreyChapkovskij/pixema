@@ -6,11 +6,13 @@ import { IMovieDetails } from '../interface.app'
 interface IMovieDetailsState {
   movieItem: IMovieDetails | null
   moviesRecommend: IMovieItem[]
+  loading: boolean
 }
 
 const initialState: IMovieDetailsState = {
   movieItem: null,
   moviesRecommend: [],
+  loading: false,
 }
 
 export const fetchMovieById = createAsyncThunk<
@@ -60,9 +62,14 @@ const movieDetailsSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchMovieById.fulfilled, (state, action) => {
       state.movieItem = action.payload
+      state.loading = false
+    })
+    builder.addCase(fetchMovieById.pending, (state) => {
+      state.loading = true
     })
     builder.addCase(fetchMovieById.rejected, (state, action) => {
       alert(action.payload)
+      state.loading = false
     })
     builder.addCase(fetchMoviesRecommend.fulfilled, (state, action) => {
       state.moviesRecommend = action.payload

@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 
 import { fetchMovies } from '../../redux/moviesSlice'
-import { changeSearch } from '../../redux/searchSlice'
 
 import MoviesList from '../../components/MoviesList'
 import Sidebar from '../../components/Sidebar'
@@ -22,12 +21,6 @@ const Home: React.FC = () => {
   useEffect(() => {
     dispatch(fetchMovies({ filter, currentPage, search }))
   }, [filter, currentPage, search])
-
-  useEffect(() => {
-    return () => {
-      dispatch(changeSearch(''))
-    }
-  }, [])
 
   return (
     <Helmet title={'Home'}>

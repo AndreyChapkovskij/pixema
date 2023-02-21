@@ -9,6 +9,7 @@ import FilterMarks from '../FilterMarks'
 import MovieCard from '../UI/MovieCard'
 import SearchResult from '../UI/SearchResult'
 import Spinner from '../UI/Icons/Spinner'
+import Loader from '../UI/Icons/Loader'
 
 interface IMovieListProps {
   setCurrentPage: (arg: number) => void
@@ -22,7 +23,6 @@ const MoviesList: React.FC<IMovieListProps> = ({
   search,
 }) => {
   const loading = useAppSelector((state) => state.moviesReducer.loading)
-
   const movies = useAppSelector((state) => state.moviesReducer.movieItems)
   const totalPages = useAppSelector((state) => state.moviesReducer.totalPages)
 
@@ -66,7 +66,7 @@ const MoviesList: React.FC<IMovieListProps> = ({
           )}
         </>
       ) : (
-        <NotFound />
+        <>{loading ? <Loader /> : <NotFound />}</>
       )}
     </div>
   )

@@ -25,24 +25,6 @@
       margin-bottom: 0;
     }
   }
-  .success {
-    display: block;
-    margin-bottom: 24px;
-    color: $_green;
-  }
-  .emailMessage {
-    margin-bottom: 24px;
-  }
-  .err {
-    color: $_red;
-    font-size: $s_span;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 24px;
-  }
-  .err::first-letter {
-    text-transform: uppercase;
-  }
   h2 {
     text-transform: capitalize;
     font-weight: 600;

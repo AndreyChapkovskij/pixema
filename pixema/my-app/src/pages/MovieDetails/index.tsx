@@ -20,6 +20,7 @@ import NotFound from '../../components/NotFound'
 import TableInfo from '../../components/UI/TableInfo'
 import Popup from '../../components/Popup'
 import Social from '../../components/UI/Social'
+import Loader from '../../components/UI/Icons/Loader'
 
 function MovieDetails() {
   const dispatch = useAppDispatch()
@@ -36,6 +37,7 @@ function MovieDetails() {
   }, [id])
 
   const movie = useAppSelector((state) => state.movieDetailsReducer.movieItem)
+  const loading = useAppSelector((state) => state.movieDetailsReducer.loading)
   const moviesRecommend = useAppSelector(
     (state) => state.movieDetailsReducer.moviesRecommend
   )
@@ -75,7 +77,7 @@ function MovieDetails() {
                 </div>
               </div>
             ) : (
-              <NotFound />
+              <>{loading ? <Loader /> : <NotFound />}</>
             )}
           </div>
         </div>

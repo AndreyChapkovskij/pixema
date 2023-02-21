@@ -48,10 +48,10 @@ const Recommendations: React.FC<IRecommendedProps> = ({ moviesRecommend }) => {
             prevEl: btnPrevSlider.current,
             nextEl: btnNextSlider.current,
           }}
-          onInit={(swiper) => {
-            swiper.navigation.init()
-            swiper.navigation.update()
-          }}
+          // onInit={(swiper) => {
+          //   swiper.navigation.init()
+          //   swiper.navigation.update()
+          // }}
           breakpoints={{
             0: {
               slidesPerView: 1,

@@ -12,6 +12,7 @@ import Settings from '../pages/Settings'
 import Trends from '../pages/Trends'
 import Dashboard from '../pages/Dashboard'
 import ProtectedRoute from './ProtectedRoute'
+import Underfind from '../pages/404'
 
 const Routers: React.FC = () => {
   return (
@@ -26,11 +27,11 @@ const Routers: React.FC = () => {
         <Route path=":uid/:token" element={<Reset />} />
       </Route>
       <Route path="/trends" element={<Trends />}></Route>
-      <Route path="dashboard" element={<Dashboard />} />
       <Route path="" element={<ProtectedRoute />}>
         <Route path="settings" element={<Settings />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Route>
-      {/* <Route path="*" element={<Navigate to="home" />} /> */}
+      <Route path="*" element={<Underfind />} />
     </Routes>
   )
 }
