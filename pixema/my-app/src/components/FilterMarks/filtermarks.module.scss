@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.marks::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.marks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  width: 100%;
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: auto;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: $_dim-grey;
+    border-radius: 40px;
+    color: $_white;
+    margin: 0 10px 15px 0;
+
+    span {
+      margin-right: 10px;
+      white-space: nowrap;
+    }
+    i {
+      cursor: pointer;
+    }
+  }
+}

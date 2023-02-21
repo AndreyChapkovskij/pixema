@@ -1,0 +1,64 @@
+@import '../../../styles/variables.scss';
+
+.product {
+  margin: 0 15px 48px;
+  cursor: pointer;
+  width: 352px;
+  @media (max-width: 990px) {
+    width: 270px;
+  }
+  @media (max-width: 630px) {
+    width: 352px;
+  }
+  h2 {
+    font-stretch: $stretch_second;
+    font-style: normal;
+    font-weight: 700;
+    font-size: $s_title_second;
+    line-height: 32px;
+    color: $_dim-grey;
+    height: 64px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .product__author {
+    font-weight: 400;
+    font-size: $s_span;
+    line-height: 24px;
+    color: $_light-grey;
+    margin-bottom: 40px;
+  }
+  .product__img {
+    width: 100%;
+    height: 254px;
+    @media (max-width: 990px) {
+      height: 204px;
+    }
+    @media (max-width: 630px) {
+      height: 254px;
+    }
+    overflow: hidden;
+    background: $_light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  .product__desc {
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-weight: 700;
+      font-size: $s_cost;
+      line-height: 32px;
+      color: $_dim-grey;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.underfind {
+  margin-bottom: auto;
+  h2 {
+    color: $_black;
+    font-size: $s_title_main * 1.5;
+    @media (max-width: 768px) {
+      font-size: $s_title_main;
+    }
+    text-transform: uppercase;
+  }
+}

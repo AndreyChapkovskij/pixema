@@ -1,0 +1,79 @@
+@import '../../../../styles/variables.scss';
+
+.search {
+  position: relative;
+  border: 1px solid $_white-grey;
+  width: 542px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    padding: 0 15px;
+    font-size: $s_input;
+    outline: none;
+    border: none;
+    width: 100%;
+  }
+  div {
+    margin-right: 15px;
+  }
+  .dropdown {
+    position: absolute;
+    @media (max-width: 768px) {
+      overflow-y: scroll;
+      max-height: 50vh;
+    }
+    background: $_white;
+    left: 0;
+    top: 54px;
+    border: 1px solid $_white-grey;
+    li {
+      &:last-child {
+        text-align: center;
+        font-weight: 400;
+        font-size: $s_span;
+        line-height: 24px;
+        color: $_light-grey;
+        display: block;
+      }
+      cursor: pointer;
+      display: flex;
+      padding: 20px;
+      border-bottom: 1px solid $_white-grey;
+      h3 {
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: $s_title_third;
+        line-height: 32px;
+        color: $_dim-grey;
+      }
+      div {
+        width: 80px;
+        height: 60px;
+        background: $_light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        img {
+          width: 70%;
+          height: 70%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+  }
+  .icon {
+    transition: 0.3s transform;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+    i {
+      font-size: $s_icon;
+      color: $_light-black;
+    }
+  }
+}

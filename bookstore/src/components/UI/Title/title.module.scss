@@ -1,0 +1,10 @@
+@import '../../../styles/variables.scss';
+
+.title {
+  font-stretch: $stretch_second;
+  font-weight: 700;
+  font-size: $s_title_main;
+  line-height: 64px;
+  color: $_dim-grey;
+  margin-bottom: 48px;
+}

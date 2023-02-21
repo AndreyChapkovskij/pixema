@@ -1,0 +1,13 @@
+.product_list {
+  padding: 72px 0;
+  .product__wrap {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 630px) {
+      justify-content: center;
+    }
+  }
+}

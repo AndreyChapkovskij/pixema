@@ -1,0 +1,126 @@
+@import '../../styles/variables.scss';
+
+.account {
+  padding: 77px 0 72px;
+  h2 {
+    font-weight: 700;
+    font-size: $s_title_second;
+    font-stretch: $stretch_second;
+    line-height: 32px;
+    color: $_dim-grey;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  label {
+    display: block;
+    font-weight: 700;
+    font-size: $s_label;
+    line-height: 32px;
+    color: $_dim-grey;
+    margin-bottom: 4px;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  input {
+    width: 100%;
+    outline: none;
+    border: 1px solid $_white-grey;
+    height: 56px;
+    font-weight: 400;
+    font-size: $s_input;
+    padding: 0 20px;
+    line-height: 32px;
+    color: $_dim-grey;
+  }
+  .profile {
+    margin-bottom: 48px;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -15px;
+      @media (max-width: 420px) {
+        flex-wrap: wrap;
+        & > div:first-child {
+          margin-bottom: 16px;
+        }
+      }
+      & > div {
+        margin: 0 15px;
+        flex-grow: 1;
+      }
+      .name {
+      }
+      .email {
+      }
+    }
+  }
+  .password {
+    padding: 0 0 72px;
+    border-bottom: 1px solid $_white-grey;
+    margin-bottom: 48px;
+    .password__old {
+      margin-bottom: 16px;
+      width: calc(50% - 15px);
+      @media (max-width: 420px) {
+        width: 100%;
+      }
+    }
+    .password__update {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 420px) {
+        flex-wrap: wrap;
+        & > div:first-child {
+          margin-bottom: 16px;
+        }
+      }
+      margin: 0 -15px;
+      & > div {
+        margin: 0 15px;
+        flex-grow: 1;
+      }
+      .password__new {
+      }
+      .password__confirm {
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 420px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      & > button {
+        flex-grow: 1;
+      }
+      & > button.save {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    & > button {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: $s_button;
+      line-height: 24px;
+      cursor: pointer;
+      width: 257px;
+      padding: 18px 5px;
+    }
+    .save {
+      color: $_white;
+      background: $_dim-grey;
+      margin-right: 32px;
+      border: none;
+    }
+    .cancel {
+      border: 1px solid $_white-grey;
+      color: $_black;
+      background: none;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+@import '../../styles/variables.scss';
+
+.authorization {
+  h2 {
+    font-weight: 700;
+    font-size: $s_title_second;
+    line-height: 24px;
+    color: $_dim-grey;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    font-stretch: $stretch_second;
+  }
+  .forms {
+    width: 544px;
+    border: 1px solid $_white-grey;
+    margin: 108px auto;
+
+    label {
+      display: block;
+      font-weight: 700;
+      font-size: $s_label;
+      line-height: 32px;
+      color: $_dim-grey;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    input {
+      display: block;
+      width: 100%;
+      height: 56px;
+      border: 1px solid $_white-grey;
+      text-transform: capitalize;
+      font-weight: 400;
+      font-size: $s_input;
+      line-height: 32px;
+      color: $_light-grey;
+      padding: 0 20px;
+    }
+    .form__tabs {
+      display: flex;
+      .sign {
+        font-stretch: $stretch_second;
+        cursor: pointer;
+        flex-grow: 1;
+        text-align: center;
+        font-weight: 700;
+        font-size: $s_button;
+        line-height: 24px;
+        color: $_light-grey;
+        text-transform: uppercase;
+        border-bottom: 1px solid $_white-grey;
+        padding: 26px 0;
+        &.active {
+          color: $_dim-grey;
+          border-bottom: 1px solid $_dim-grey;
+        }
+      }
+    }
+    .tab {
+      display: none;
+    }
+    .form_login {
+    }
+    .form_registration {
+    }
+    .form__input {
+      margin: 0 0 16px;
+      span {
+        &::first-letter {
+          text-transform: uppercase;
+        }
+        display: block;
+        font-weight: 400;
+        font-size: $s_span;
+        line-height: 32px;
+        color: $_dim-grey;
+        margin-top: 8px;
+        cursor: pointer;
+      }
+    }
+    .submit {
+      margin: 40px 0 0 0;
+      input {
+        cursor: pointer;
+        background: $_dim-grey;
+        font-weight: 700;
+        font-size: $s_button;
+        line-height: 24px;
+        color: $_white;
+        text-transform: uppercase;
+        text-align: center;
+        font-stretch: $stretch_second;
+      }
+    }
+  }
+  form {
+    padding: 40px 32px;
+  }
+}
+.emailMessage {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  span {
+    font-weight: 700;
+  }
+  margin-bottom: 24px;
+  background: $_light;
+  padding: 20px;
+  display: block;
+  font-weight: 400;
+  font-size: $s_span;
+  line-height: 24px;
+  color: $_dim-grey;
+}

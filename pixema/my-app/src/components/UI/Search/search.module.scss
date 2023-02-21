@@ -1,0 +1,94 @@
+@import '../../../styles/variables.scss';
+
+.search {
+  border: 2px solid $_light-grey;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 15px;
+  position: relative;
+  height: 56px;
+  .dropdown {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 52px;
+    width: 100%;
+    border: 2px solid $_light-grey;
+    border-radius: 10px;
+    overflow: hidden;
+    & > li {
+      &:last-child {
+        &:first-letter {
+          text-transform: uppercase;
+        }
+        display: block;
+        text-align: center;
+        padding: 15px;
+        span {
+          font-size: $s_span;
+          color: $_light-grey;
+        }
+      }
+      @media (max-width: 410px) {
+        justify-content: flex-start;
+        & > ul {
+          display: none;
+        }
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: $_white;
+      padding: 10px 25px;
+      border-bottom: 1px solid $_light-grey;
+      cursor: pointer;
+      h3 {
+        font-size: $s_title-third;
+        margin-right: 20px;
+        flex-shrink: 0;
+        width: 30%;
+      }
+      div {
+        margin-right: 20px;
+        height: 70px;
+        width: 53px;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 10%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    order: 3;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  & > input {
+    outline: none;
+    border: none;
+    flex-grow: 1;
+    margin: 0 22px;
+    font-size: $s_input;
+    width: 50px;
+  }
+
+  .search__icon {
+    display: flex;
+    align-items: center;
+    margin-right: 22px;
+    cursor: pointer;
+    i {
+      font-size: $s_icon;
+      color: $_light-grey;
+    }
+  }
+}

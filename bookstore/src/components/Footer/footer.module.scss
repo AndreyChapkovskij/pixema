@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  .wrap {
+    border-top: 1px solid $_white-grey;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  span {
+    &:first-child {
+      margin-right: 30px;
+    }
+    display: block;
+    font-size: $s_span;
+    color: $_light-grey;
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: 24px;
+    @media (max-width: 320px) {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

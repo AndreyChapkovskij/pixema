@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+
+.movie {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  flex-grow: 1;
+  & > div {
+    margin: 0 15px;
+  }
+
+  .movie__info {
+    flex-grow: 1;
+
+    h2 {
+      font-weight: 600;
+      font-size: $s_title_second;
+      line-height: 55px;
+      margin-bottom: 10px;
+      color: $_black;
+    }
+    .marks {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 42px;
+      div {
+        margin: 0 20px 5px 0;
+        padding: 2px 8px;
+        border-radius: 6px;
+        span {
+          font-weight: 600;
+          font-size: $s_span;
+          line-height: 24px;
+          color: $_white;
+        }
+      }
+      div:last-child {
+        margin: 0 0 5px 0;
+      }
+      .rating {
+        background: $_green;
+      }
+      .imdb {
+        span:first-child {
+          margin-right: 5px;
+          font-weight: 700;
+        }
+      }
+      .duration,
+      .imdb {
+        background: $_dim-grey;
+      }
+    }
+    .desc {
+      margin-bottom: 40px;
+
+      p {
+        font-weight: 500;
+        font-size: $s_desc;
+        line-height: 24px;
+        color: $_black;
+      }
+    }
+  }
+}
+
+.active {
+  .movie__info {
+    .desc {
+      p {
+        color: $_white;
+      }
+    }
+    h2 {
+      color: $_white;
+    }
+  }
+}

@@ -1,0 +1,1758 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2021",
+      "cost": "38.02",
+      "rating": 4.4,
+      "image": "186.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "75.78",
+      "rating": 2.9,
+      "image": "18.jpeg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2000",
+      "cost": "9.45",
+      "rating": 1.4,
+      "image": "26.jpeg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "85.96",
+      "rating": 2.4,
+      "image": "200.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "313.71",
+      "rating": 4.8,
+      "image": "221.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "11.48",
+      "rating": 3.4,
+      "image": "531.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "58.12",
+      "rating": 4.9,
+      "image": "388.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "251.80",
+      "rating": 3.5,
+      "image": "2715004_detail.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "69.14",
+      "rating": 2.8,
+      "image": "2817.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "89.25",
+      "rating": 4.3,
+      "image": "2837.750x0.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "42.69",
+      "rating": 2.1,
+      "image": "3119.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "46.10",
+      "rating": 1.4,
+      "image": "419293 .jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "5.30",
+      "rating": 1.9,
+      "image": "2829960_detail.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "41.73",
+      "rating": 0.4,
+      "image": "2833416_detail.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "10.98",
+      "rating": 0.8,
+      "image": "a0d44920-1d29-11ed-a6e9-0242ac1f0002.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "61.38",
+      "rating": 4.1,
+      "image": "2901677_detail.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "35.08",
+      "rating": 3.4,
+      "image": "b21_220622_3d_p.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "70.00",
+      "rating": 4.9,
+      "image": "cover1__w820.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "91.56",
+      "rating": 2.4,
+      "image": "o.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "OS X Mountain Lion",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "51.78",
+      "rating": 1.0,
+      "image": "437.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "The Python Book Magazine (Digital) in 2022 Python book ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "76.01",
+      "rating": 4.2,
+      "image": "de2f14d8284461302be0a9623d5c895d.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "JavaScript in 2022 Learn javascript, Mastery learning",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "76.35",
+      "rating": 3.2,
+      "image": "d3f2fc7cedd47045cacca12bd1ded2b7.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+
+    {
+      "id": 23,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "42.69",
+      "rating": 2.1,
+      "image": "3119.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "46.10",
+      "rating": 1.4,
+      "image": "419293 .jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "5.30",
+      "rating": 1.9,
+      "image": "2829960_detail.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "41.73",
+      "rating": 0.4,
+      "image": "2833416_detail.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "10.98",
+      "rating": 0.8,
+      "image": "a0d44920-1d29-11ed-a6e9-0242ac1f0002.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+
+    {
+      "id": 28,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2021",
+      "cost": "38.02",
+      "rating": 4.4,
+      "image": "186.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "75.78",
+      "rating": 2.9,
+      "image": "18.jpeg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2000",
+      "cost": "9.45",
+      "rating": 1.4,
+      "image": "26.jpeg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "85.96",
+      "rating": 2.4,
+      "image": "200.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "313.71",
+      "rating": 4.8,
+      "image": "221.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "11.48",
+      "rating": 3.4,
+      "image": "531.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "58.12",
+      "rating": 4.9,
+      "image": "388.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    }
+  ],
+
+  "similar": [
+    {
+      "id": 23,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "42.69",
+      "rating": 2.1,
+      "image": "3119.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "46.10",
+      "rating": 1.4,
+      "image": "419293 .jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "5.30",
+      "rating": 1.9,
+      "image": "2829960_detail.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "41.73",
+      "rating": 0.4,
+      "image": "2833416_detail.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "10.98",
+      "rating": 0.8,
+      "image": "a0d44920-1d29-11ed-a6e9-0242ac1f0002.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+
+    {
+      "id": 28,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2021",
+      "cost": "38.02",
+      "rating": 4.4,
+      "image": "186.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "75.78",
+      "rating": 2.9,
+      "image": "18.jpeg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2000",
+      "cost": "9.45",
+      "rating": 1.4,
+      "image": "26.jpeg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "85.96",
+      "rating": 2.4,
+      "image": "200.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "313.71",
+      "rating": 4.8,
+      "image": "221.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "11.48",
+      "rating": 3.4,
+      "image": "531.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Android Apps for Absolute Beginners, 2nd Edition ",
+      "authors": ["Jon Snoy", "Lentin Joseph", "Aleena Johny"],
+      "publisher": "Apress 2022",
+      "cost": "58.12",
+      "rating": 4.9,
+      "image": "388.970.jpg",
+      "description": "Start programming your own robots using Robot Operation System (ROS). Targeted for absolute beginners in ROS, Linux, and Python, this guide lets you build your own robotics projects. You'll learn the basic foundation of Ubuntu Linux. Begin with the fundamentals. Installation and useful commands will give you the basic tools you need while programming a robot. Then add useful software applications that can be used while making robots. Programming robots can be done using any of the programming languages. Most popular programming languages are Python and C++. You will incorporate the fundamentals of C++ by learning object oriented programing concepts from example and building C++ projects.",
+      "info": [
+        {
+          "title": "language",
+          "description": "English"
+        },
+        {
+          "title": "format",
+          "description": "Paper book / ebook (PDF)"
+        },
+        {
+          "title": "pages",
+          "description": "541"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "name": "markul",
+          "text": "very informative book",
+          "mark": 5
+        },
+        {
+          "id": 2,
+          "name": "alica yandex",
+          "text": "I was written thanks to this book",
+          "mark": 4
+        }
+      ]
+    }
+  ]
+}

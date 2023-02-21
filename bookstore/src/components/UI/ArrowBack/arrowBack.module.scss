@@ -1,0 +1,10 @@
+@import '../../../styles/variables.scss';
+
+.arrow {
+  margin-bottom: 37px;
+  i {
+    cursor: pointer;
+    font-size: $s_icon;
+    color: $_dim-grey;
+  }
+}

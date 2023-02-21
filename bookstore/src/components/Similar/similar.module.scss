@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.similar {
+  @media (max-width: 410px) {
+    display: none;
+  }
+  margin-bottom: 40px;
+  & > div {
+    padding: 72px 15px;
+    border-bottom: 1px solid $_white-grey;
+  }
+
+  .similar__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    h3 {
+      font-weight: 700;
+      font-size: $s_title_section;
+      line-height: 60px;
+      color: $_dim-grey;
+      font-stretch: $stretch_second;
+      text-transform: uppercase;
+    }
+    .arrows {
+      color: $_black;
+      font-size: $s_icon;
+      font-weight: 500;
+      i {
+        cursor: pointer;
+      }
+      i:first-child {
+        margin-right: 22px;
+      }
+    }
+  }
+  .similar__products {
+    max-width: 100%;
+    margin: 0 -15px;
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../styles/variables.scss';
+
+.subscribe {
+  margin-bottom: 60px;
+  .wrap {
+    background: $_light;
+    padding: 56px 64px;
+    @media (max-width: 320px) {
+      padding: 20px 30px;
+    }
+  }
+  h2 {
+    font-weight: 700;
+    font-size: $s_title_section;
+    font-stretch: $stretch_second;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color: $_dim-grey;
+    text-transform: uppercase;
+  }
+  span {
+    display: block;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: $s_span;
+    line-height: 28px;
+    color: $_light-grey;
+  }
+  .subscribe__input {
+    display: flex;
+    border-radius: 2px;
+    overflow: hidden;
+    @media (max-width: 530px) {
+      flex-direction: column;
+      input {
+        margin-bottom: 35px;
+      }
+    }
+    input {
+      height: 56px;
+      font-weight: 400;
+      font-size: $s_input;
+      line-height: 24px;
+      color: $_light-grey;
+      padding: 0 24px;
+      flex-grow: 1;
+      border: none;
+      outline: none;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      background: $_dim-grey;
+      padding: 12px 10px;
+      text-transform: uppercase;
+      font-stretch: $stretch_second;
+      font-weight: 700;
+      font-size: $s_span;
+      line-height: 24px;
+      color: $_white;
+    }
+  }
+}

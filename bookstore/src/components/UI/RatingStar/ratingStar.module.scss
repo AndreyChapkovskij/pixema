@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+
+.rating {
+  display: flex;
+  i {
+    display: block;
+    margin-right: 10px;
+    color: $_light-black;
+    font-size: $s_icon-rating;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
