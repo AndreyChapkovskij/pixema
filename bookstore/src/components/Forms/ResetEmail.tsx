@@ -1,4 +1,4 @@
-import styles from '../Authorization/authorization.module.scss'
+import styles from '../../pages/Authorization/authorization.module.scss'
 
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
@@ -6,13 +6,13 @@ import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 
 import { fetchResetPassword } from '../../redux/resetSlice'
 
-import Error from '../../components/UI/Inputs/error'
+import Error from '../UI/Inputs/error'
 
 interface IResetInput {
   email: string
 }
 
-const Reset: React.FC = () => {
+const ResetEmail: React.FC = () => {
   const dispatch = useAppDispatch()
 
   const navigate = useNavigate()
@@ -36,17 +36,17 @@ const Reset: React.FC = () => {
     <form className={styles.forms} onSubmit={handleReset}>
       <h2>reset password</h2>
       {resetMessage ? (
-        <span className={styles.success}>{resetMessage}</span>
+        <span className="success">{resetMessage}</span>
       ) : (
         watch('email') && (
           <span className={styles.emailMessage}>
-            you will receive an email {watch('email')} with a link to reset your
-            password!
+            you will receive an email <span> {watch('email')}</span> with a link
+            to reset your password!
           </span>
         )
       )}
 
-      {errMessage && <span className={styles.err}>{errMessage}</span>}
+      {errMessage && <span className="error">{errMessage}</span>}
       <div className={styles.form__input}>
         <label htmlFor="email">email</label>
         <input
@@ -69,4 +69,4 @@ const Reset: React.FC = () => {
   )
 }
 
-export default Reset
+export default ResetEmail

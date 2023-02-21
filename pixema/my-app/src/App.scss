@@ -48,10 +48,19 @@ body {
   display: flex;
   align-items: center;
 }
-.error {
+.error,
+.success {
   &::first-letter {
     text-transform: uppercase;
   }
-  color: $_red;
+  font-weight: 600;
+  display: block;
+  margin: 5px 0;
   font-size: $s_span;
+}
+.error {
+  color: $_red;
+}
+.success {
+  color: $_green;
 }

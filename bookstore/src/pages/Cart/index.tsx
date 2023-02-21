@@ -1,6 +1,5 @@
 import styles from './cart.module.scss'
 
-import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppSelector, useAppDispatch } from '../../hooks/redux'
 
@@ -13,17 +12,11 @@ import {
   delCartItem,
 } from '../../redux/cartSlice'
 
-import { IProductItem } from '../../interface.app'
-
-import Subscribe from '../../components/Subscribe'
 import Helmet from '../../components/Helmet'
 import ArrowBack from '../../components/UI/ArrowBack'
-import ProductCard, { IProduct } from '../../components/UI/ProductCard'
-import PlusIcon from '../../components/UI/icons/PlusIcon'
-import MinusIcon from '../../components/UI/icons/MinusIcon'
-import CloseIcon from '../../components/UI/icons/CloseIcon'
 import Title from '../../components/UI/Title'
 import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 const Cart: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -72,7 +65,7 @@ const Cart: React.FC = () => {
                     </div>
                     <span>{product.count}</span>
                     <div
-                      className={styles.cart__del}
+                      className={styles.cart__minus}
                       onClick={() => dispatch(delCartCountOne(product.id))}
                     >
                       <i className="ri-subtract-fill"></i>
@@ -127,6 +120,7 @@ const Cart: React.FC = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </Helmet>
   )
 }

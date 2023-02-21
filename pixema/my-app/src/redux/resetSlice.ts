@@ -85,6 +85,7 @@ const resetSlice = createSlice({
       state.errMessage = ''
     })
     builder.addCase(fetchResetPassword.rejected, (state, action) => {
+      state.resetMessage = ''
       state.errMessage = action.payload
     })
     builder.addCase(fetchResetConfirm.fulfilled, (state, action) => {

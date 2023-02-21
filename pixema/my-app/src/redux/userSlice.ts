@@ -10,6 +10,7 @@ interface IUserState {
   accessToken: string
   isLoggedIn: boolean
   successMessage: string
+  errMessage: string | undefined
 }
 
 const initialState: IUserState = {
@@ -17,6 +18,7 @@ const initialState: IUserState = {
   accessToken: '',
   isLoggedIn: false,
   successMessage: '',
+  errMessage: '',
 }
 
 export interface IUserParams {
@@ -139,6 +141,8 @@ const userSlice = createSlice({
       localStorage.setItem('user', JSON.stringify(action.payload))
       state.isLoggedIn = true
       state.accessToken = action.payload.access
+      state.successMessage = ''
+      state.errMessage = ''
     })
     builder.addCase(fetchRefresh.fulfilled, (state, action) => {
       state.accessToken = action.payload.access
@@ -151,8 +155,9 @@ const userSlice = createSlice({
       state.userData = action.payload
     })
     builder.addCase(fetchLogin.rejected, (state, action) => {
-      alert(action.payload)
       state.isLoggedIn = false
+      state.successMessage = ''
+      state.errMessage = action.payload
     })
     builder.addCase(fetchUserData.rejected, (state, action) => {
       state.userData = {}

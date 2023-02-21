@@ -5,6 +5,9 @@
   .wrap {
     background: $_light;
     padding: 56px 64px;
+    @media (max-width: 320px) {
+      padding: 20px 30px;
+    }
   }
   h2 {
     font-weight: 700;
@@ -51,7 +54,7 @@
       cursor: pointer;
       border: none;
       background: $_dim-grey;
-      padding: 12px 40px;
+      padding: 12px 10px;
       text-transform: uppercase;
       font-stretch: $stretch_second;
       font-weight: 700;

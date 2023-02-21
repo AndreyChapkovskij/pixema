@@ -49,7 +49,7 @@
     font-size: $s_title_second;
     margin-bottom: 40px;
   }
-  & > span {
+  & > span.forms__link {
     &::first-letter {
       text-transform: uppercase;
     }

@@ -62,7 +62,7 @@ const RegistrationForm: React.FC = () => {
     >
       <h2>sign up</h2>
 
-      {errMessage && <span className={styles.err}>{errMessage}</span>}
+      {errMessage && <span className="error">{errMessage}</span>}
 
       <div className={styles.forms__inputs}>
         <UserName register={register} error={errors.userName?.message} />

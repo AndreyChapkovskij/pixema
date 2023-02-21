@@ -98,3 +98,19 @@
     padding: 40px 32px;
   }
 }
+.emailMessage {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  span {
+    font-weight: 700;
+  }
+  margin-bottom: 24px;
+  background: $_light;
+  padding: 20px;
+  display: block;
+  font-weight: 400;
+  font-size: $s_span;
+  line-height: 24px;
+  color: $_dim-grey;
+}

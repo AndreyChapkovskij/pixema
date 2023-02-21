@@ -10,8 +10,8 @@ import { changeIsTheme } from '../../redux/themeSlice'
 import {
   fetchSetPassword,
   fetchSetEmail,
-  changeEmailMessage,
-  changePasswordMessage,
+  changeSuccessMessage,
+  changeErrorMessage,
 } from '../../redux/settingsSlice'
 import { fetchUserData } from '../../redux/userSlice'
 
@@ -40,19 +40,19 @@ const Settings: React.FC = () => {
   const accessToken = useAppSelector((state) => state.userReducer.accessToken)
 
   const errMessage = useAppSelector((state) => state.settingsReducer.errMessage)
-  const passwordMessage = useAppSelector(
-    (state) => state.settingsReducer.passwordMessage
-  )
-  const emailMessage = useAppSelector(
-    (state) => state.settingsReducer.emailMessage
+  const successMessage = useAppSelector(
+    (state) => state.settingsReducer.successMessage
   )
 
   useEffect(() => {
-    return () => {
-      emailMessage && dispatch(changeEmailMessage(''))
-      passwordMessage && dispatch(changePasswordMessage(''))
+    if (errMessage || successMessage) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
-  }, [])
+    return () => {
+      successMessage && dispatch(changeSuccessMessage(''))
+      errMessage && dispatch(changeErrorMessage(''))
+    }
+  }, [errMessage, successMessage])
 
   const {
     register,
@@ -117,11 +117,10 @@ const Settings: React.FC = () => {
             <form className={styles.settings} onSubmit={onSubmitSave}>
               <div className={styles.profile}>
                 <h3>Profile</h3>
-
-                {emailMessage && (
-                  <span className={styles.successMessage}>{emailMessage}</span>
+                {errMessage && <span className="error">{errMessage}</span>}
+                {successMessage && (
+                  <span className="success">{successMessage}</span>
                 )}
-
                 <div className={styles.profile__data}>
                   <UserName
                     register={register}
@@ -132,11 +131,6 @@ const Settings: React.FC = () => {
               </div>
               <div className={styles.password}>
                 <h3>Password</h3>
-                {passwordMessage && (
-                  <span className={styles.successMessage}>
-                    {passwordMessage}
-                  </span>
-                )}
 
                 <div className={styles.password__data}>
                   <Password
@@ -181,10 +175,6 @@ const Settings: React.FC = () => {
                   </div>
                 </div>
               </div>
-
-              {errMessage && (
-                <span className={styles.errMessage}>{errMessage}</span>
-              )}
 
               <div className={styles.btns}>
                 <button onClick={onSubmitCancel} className={styles.cancel}>

@@ -38,7 +38,7 @@ const TokenForm: React.FC = () => {
       className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
     >
       <h2>sign up</h2>
-      {errMessage && <span className={styles.err}>{errMessage}</span>}
+      {errMessage && <span className="error">{errMessage}</span>}
       <Token register={register} error={errors.token?.message} />
       <Submit isValid={isValid} value={'Access'} />
     </form>

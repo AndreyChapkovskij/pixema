@@ -19,7 +19,7 @@ import Title from '../../components/UI/Title'
 const Favorites: React.FC = () => {
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
-  
+
   const products = useAppSelector((state) => state.productsReducer.productItems)
   const favoritesId = useAppSelector(
     (state) => state.productsReducer.favotiresId
@@ -39,12 +39,11 @@ const Favorites: React.FC = () => {
           {favoritesId[0] && (
             <div className={styles.favorites__list}>
               {products.map((product) => (
-                <div
-                  className={styles.favorites__item}
-                  onClick={() => navigate(`/product/${product.id}`)}
-                  key={product.id}
-                >
-                  <div className={styles.favorites__img}>
+                <div className={styles.favorites__item} key={product.id}>
+                  <div
+                    className={styles.favorites__img}
+                    onClick={() => navigate(`/product/${product.id}`)}
+                  >
                     <img src={product.image} alt={product.title} />
                   </div>
                   <div className={styles.favorites__info}>

@@ -15,14 +15,12 @@ interface ISettingsPasswordParams {
 
 interface ISettingsState {
   errMessage: string | undefined
-  passwordMessage: string
-  emailMessage: string
+  successMessage: string
 }
 
 const initialState: ISettingsState = {
   errMessage: '',
-  passwordMessage: '',
-  emailMessage: '',
+  successMessage: '',
 }
 
 export const fetchSetEmail = createAsyncThunk<
@@ -90,34 +88,34 @@ const settingsSlice = createSlice({
   name: 'settings',
   initialState,
   reducers: {
-    changePasswordMessage: (state, action: PayloadAction<string>) => {
-      state.passwordMessage = action.payload
+    changeSuccessMessage: (state, action: PayloadAction<string>) => {
+      state.successMessage = action.payload
     },
-    changeEmailMessage: (state, action: PayloadAction<string>) => {
-      state.emailMessage = action.payload
+    changeErrorMessage: (state, action: PayloadAction<string>) => {
+      state.errMessage = action.payload
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchSetEmail.fulfilled, (state, action) => {
       state.errMessage = ''
-      state.emailMessage = 'Email has been updated'
+      state.successMessage = 'Changes have been updated'
     })
     builder.addCase(fetchSetEmail.rejected, (state, action) => {
       state.errMessage = action.payload
-      state.emailMessage = ''
+      state.successMessage = ''
     })
     builder.addCase(fetchSetPassword.fulfilled, (state, action) => {
       state.errMessage = ''
-      state.passwordMessage = 'Password has been updated'
+      state.successMessage = 'Changes have been updated'
     })
     builder.addCase(fetchSetPassword.rejected, (state, action) => {
       state.errMessage = action.payload
-      state.passwordMessage = ''
+      state.successMessage = ''
     })
   },
 })
 
-export const { changePasswordMessage, changeEmailMessage } =
+export const { changeSuccessMessage, changeErrorMessage } =
   settingsSlice.actions
 
 export default settingsSlice.reducer

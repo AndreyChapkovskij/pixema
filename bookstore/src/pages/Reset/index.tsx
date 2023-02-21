@@ -8,6 +8,7 @@ import { changeIsSuccess } from '../../redux/resetSlice'
 import { changeSuccessMessage } from '../../redux/userSlice'
 
 import ChangePassword from '../../components/Forms/ChangePassword'
+import ResetEmail from '../../components/Forms/ResetEmail'
 import Helmet from '../../components/Helmet'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -32,7 +33,11 @@ const Reset: React.FC = () => {
       <Header />
       <section className={styles.authorization}>
         <div className="container">
-          {resetToken.uid && resetToken.token ? <ChangePassword /> : <Reset />}
+          {resetToken.uid && resetToken.token ? (
+            <ChangePassword />
+          ) : (
+            <ResetEmail />
+          )}
         </div>
       </section>
       <Footer />

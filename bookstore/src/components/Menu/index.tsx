@@ -3,14 +3,10 @@ import styles from './menu.module.scss'
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { logout } from '../../redux/userSlice'
 
-import NavigateLinks from '../UI/Links/navigateLinks'
-import AccountLinks from '../UI/Links/accountLinks'
-import LogoutLink from '../UI/Links/logoutLink'
 import Search from '../UI/Inputs/Search'
-import SearchIcon from '../UI/icons/SearchIcon'
 
 interface IMenuProps {
   isMenu: boolean

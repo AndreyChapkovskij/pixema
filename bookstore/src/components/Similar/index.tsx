@@ -52,7 +52,7 @@ const Similar: React.FC = () => {
                 spaceBetween: 15,
               },
               515: {
-                slidesPerView: 1.3,
+                slidesPerView: 1,
                 spaceBetween: 15,
               },
               630: {

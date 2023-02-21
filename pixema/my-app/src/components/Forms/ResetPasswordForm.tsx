@@ -38,8 +38,9 @@ const ResetPasswordForm: React.FC = () => {
       className={isTheme ? styles.forms + ' ' + styles.active : styles.forms}
     >
       <h2>reset password</h2>
+      {errMessage && <span className="error">{errMessage}</span>}
       {resetMessage ? (
-        <span className={styles.success}>{resetMessage}</span>
+        <span className="success">{resetMessage}</span>
       ) : (
         watch('email') && (
           <span className={styles.emailMessage}>
@@ -49,7 +50,6 @@ const ResetPasswordForm: React.FC = () => {
         )
       )}
 
-      {errMessage && <span className={styles.err}>{errMessage}</span>}
       <Email register={register} error={errors.email?.message} />
 
       <Submit isValid={isValid} value="Reset" />

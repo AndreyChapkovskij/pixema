@@ -14,11 +14,15 @@ const Pagination: React.FC<IPaginationProps> = ({
   currentPage,
   setCurrentPage,
 }) => {
-  
   let pages: number[] = []
 
   for (let i = 0; i < totalPages; i++) {
     pages = [...pages, i + 1]
+  }
+
+  const changePage = (page: number): void => {
+    setCurrentPage(page)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -31,20 +35,20 @@ const Pagination: React.FC<IPaginationProps> = ({
                 ? styles.pagination__arrow + ' ' + styles.active
                 : styles.pagination__arrow
             }
-            onClick={() => 1 !== currentPage && setCurrentPage(currentPage - 1)}
+            onClick={() => 1 !== currentPage && changePage(currentPage - 1)}
           >
             <ArrowLeftIcon />
             <span>Prev</span>
           </div>
           <ul>
-            {currentPage > 3 && <li onClick={() => setCurrentPage(1)}>1</li>}
+            {currentPage > 3 && <li onClick={() => changePage(1)}>1</li>}
             {pages.map(
               (page) =>
                 currentPage - 2 < page &&
                 page < 3 + currentPage && (
                   <li
                     className={page === currentPage ? styles.active : ''}
-                    onClick={() => setCurrentPage(page)}
+                    onClick={() => changePage(page)}
                     key={page}
                   >
                     {page}
@@ -52,7 +56,7 @@ const Pagination: React.FC<IPaginationProps> = ({
                 )
             )}
             {pages.length > 3 && pages.length > currentPage + 2 && (
-              <li onClick={() => setCurrentPage(pages.length)}>
+              <li onClick={() => changePage(pages.length)}>
                 <span>...</span>
                 {pages.length}
               </li>
@@ -65,7 +69,7 @@ const Pagination: React.FC<IPaginationProps> = ({
                 : styles.pagination__arrow
             }
             onClick={() =>
-              totalPages !== currentPage && setCurrentPage(currentPage + 1)
+              totalPages !== currentPage && changePage(currentPage + 1)
             }
           >
             <span>Next</span>

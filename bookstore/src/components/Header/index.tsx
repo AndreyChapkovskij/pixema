@@ -1,8 +1,7 @@
 import styles from './header.module.scss'
 
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { useAppDispatch } from '../../hooks/redux'
 import useDebounce from '../../hooks/useDebounce'
 
 import { fetchProductsSearch, changeSearch } from '../../redux/productSlice'
@@ -14,7 +13,6 @@ import AccountIcon from '../UI/icons/AccountIcon'
 import FavoritesIcon from '../UI/icons/FavoritesIcon'
 import Menu from '../Menu'
 import MenuIcon from '../UI/icons/MenuIcon'
-
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch()

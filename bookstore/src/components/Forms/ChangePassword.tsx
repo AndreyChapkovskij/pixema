@@ -46,7 +46,7 @@ const ChangePassword: React.FC = () => {
   return (
     <form className={styles.forms} onSubmit={handleResetConfirm}>
       <h2>new password</h2>
-      {errMessage && <span className={styles.err}>{errMessage}</span>}
+      {errMessage && <span className="error">{errMessage}</span>}
       <div className={styles.form__input}>
         <label htmlFor="password">password</label>
         <input

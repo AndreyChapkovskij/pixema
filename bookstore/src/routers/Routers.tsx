@@ -23,7 +23,7 @@ const Routers: React.FC = () => {
       </Route>
       <Route path="" element={<ProtectedRoute />}>
         <Route path="account" element={<Account />} />
-        <Route path="/favorites" element={<Favorites />}></Route>
+        <Route path="favorites" element={<Favorites />}></Route>
         <Route path="cart" element={<Cart />} />
       </Route>
     </Routes>

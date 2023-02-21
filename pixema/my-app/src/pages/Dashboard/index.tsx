@@ -75,12 +75,11 @@ function Dashboard() {
     setInfo([...info, { title: '', description: '', id: Date.now() }])
   }
   const handleDelInfo = (e: FormEvent, id: number): void => {
-    setInfo(info.filter((i) => i.id !== id))
-    console.log(id)
     e.preventDefault()
+    setInfo(info.filter((i) => i.id !== id))
   }
-  const changeInfo = (key: string, value: string, id: number) => {
-    setInfo(info.map((i) => (i.id === id ? { ...i, [key]: value } : i)))
+  const changeInfo = (title: string, description: string, id: number) => {
+    setInfo(info.map((i) => (i.id === id ? { ...i, [title]: description } : i)))
   }
 
   const {
@@ -89,11 +88,10 @@ function Dashboard() {
     handleSubmit,
     setValue,
     reset,
-    getValues,
     watch,
     setFocus,
     setError,
-    formState: { errors, isValid, isValidating },
+    formState: { errors, isValid },
   } = useForm<IMovieInputs>({ mode: 'onChange' })
 
   const onSubmitCreate = handleSubmit((createdFormData) => {
@@ -101,8 +99,9 @@ function Dashboard() {
     const country = countries.find(
       (country) => country.name === createdFormData.country
     )
-    !country && setError('country', { message: 'This country underfind' })
+
     genreAdded.length > 3 && setError('genres', { message: 'Max 3 genres' })
+
     const form = new FormData()
     form.append('title', createdFormData.title)
     form.append('rating', createdFormData.rating)
@@ -274,7 +273,7 @@ function Dashboard() {
           isModal={successMessage}
           setIsModal={setIsModal}
         >
-          <span className={styles.successMessage}>{successMessage}</span>
+          <span className="success">{successMessage}</span>
         </Popup>
       </section>
       <Footer />

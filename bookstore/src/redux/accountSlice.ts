@@ -87,11 +87,15 @@ export const fetchSetPassword = createAsyncThunk<
 const accountSlice = createSlice({
   name: 'account',
   initialState,
-  reducers: {},
+  reducers: {
+    changeSuccessMessage: (state, action) => {
+      state.successMessage = action.payload
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchSetEmail.fulfilled, (state, action) => {
       state.errMessage = ''
-      state.successMessage = 'Email has been updated'
+      state.successMessage = 'Changes has been updated'
     })
     builder.addCase(fetchSetEmail.rejected, (state, action) => {
       state.errMessage = action.payload
@@ -99,7 +103,7 @@ const accountSlice = createSlice({
     })
     builder.addCase(fetchSetPassword.fulfilled, (state, action) => {
       state.errMessage = ''
-      state.successMessage = 'Password has been updated'
+      state.successMessage = 'Changes has been updated'
     })
     builder.addCase(fetchSetPassword.rejected, (state, action) => {
       state.errMessage = action.payload
@@ -108,6 +112,6 @@ const accountSlice = createSlice({
   },
 })
 
-export const {} = accountSlice.actions
+export const { changeSuccessMessage } = accountSlice.actions
 
 export default accountSlice.reducer

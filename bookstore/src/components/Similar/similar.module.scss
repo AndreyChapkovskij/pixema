@@ -1,6 +1,9 @@
 @import '../../styles/variables.scss';
 
 .similar {
+  @media (max-width: 410px) {
+    display: none;
+  }
   margin-bottom: 40px;
   & > div {
     padding: 72px 15px;
