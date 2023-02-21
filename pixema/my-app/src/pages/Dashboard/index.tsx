@@ -100,7 +100,8 @@ function Dashboard() {
       (country) => country.name === createdFormData.country
     )
 
-    genreAdded.length > 3 && setError('genres', { message: 'Max 3 genres' })
+    genreAdded.length !== 3 &&
+      setError('genres', { message: 'You need to choose 3 genres' })
 
     const form = new FormData()
     form.append('title', createdFormData.title)
@@ -130,7 +131,16 @@ function Dashboard() {
               <h2>Create new movie</h2>
               <form onSubmit={onSubmitCreate}>
                 <div className={styles.form__inputs}>
-                  <input placeholder="title" {...register('title', {})} />
+                  <input
+                    placeholder="title"
+                    {...register('title', {
+                      required: 'You need to fill in this field',
+                      minLength: {
+                        value: 4,
+                        message: 'This title too short',
+                      },
+                    })}
+                  />
                   {errors.title?.message && (
                     <Error error={errors.title?.message} />
                   )}
@@ -152,7 +162,13 @@ function Dashboard() {
                         : 'Choose your image'}
                     </span>
                   </motion.label>
-                  <input type="file" id="fileUpload" {...register('img', {})} />
+                  <input
+                    type="file"
+                    id="fileUpload"
+                    {...register('img', {
+                      required: 'Choose the image',
+                    })}
+                  />
                   {errors.img?.message && <Error error={errors.img?.message} />}
                 </div>
                 <Genres
@@ -172,13 +188,31 @@ function Dashboard() {
                   countries={countries}
                 />
                 <div className={styles.form__inputs}>
-                  <input placeholder="imdb" {...register('imdb', {})} />
+                  <input
+                    placeholder="imdb"
+                    {...register('imdb', {
+                      required: 'You need to fill in this field',
+                      pattern: {
+                        value: /^(\d|10|\d[.,]\d)$/,
+                        message: 'Please enter valid rating from 0.0 to 10',
+                      },
+                    })}
+                  />
                   {errors.imdb?.message && (
                     <Error error={errors.imdb?.message} />
                   )}
                 </div>
                 <div className={styles.form__inputs}>
-                  <input placeholder="duration" {...register('duration', {})} />
+                  <input
+                    placeholder="duration"
+                    {...register('duration', {
+                      required: 'You need to fill in this field',
+                      pattern: {
+                        value: /^\d{1,3}$/,
+                        message: 'Please enter valid duration in minutes',
+                      },
+                    })}
+                  />
                   {errors.duration?.message && (
                     <Error error={errors.duration?.message} />
                   )}
@@ -186,20 +220,44 @@ function Dashboard() {
                 <div className={styles.description}>
                   <textarea
                     placeholder="description"
-                    {...register('description', {})}
+                    {...register('description', {
+                      required: 'You need to fill in this field',
+                      minLength: {
+                        value: 32,
+                        message: 'This description too short',
+                      },
+                    })}
                   />
                   {errors.description?.message && (
                     <Error error={errors.description?.message} />
                   )}
                 </div>
                 <div className={styles.form__inputs}>
-                  <input placeholder="rating" {...register('rating', {})} />
+                  <input
+                    placeholder="rating"
+                    {...register('rating', {
+                      required: 'You need to fill in this field',
+                      pattern: {
+                        value: /^(\d|10|\d[.,]\d)$/,
+                        message: 'Please enter valid rating from 0.0 to 10',
+                      },
+                    })}
+                  />
                   {errors.rating?.message && (
                     <Error error={errors.rating?.message} />
                   )}
                 </div>
                 <div className={styles.form__inputs}>
-                  <input placeholder="year" {...register('year', {})} />
+                  <input
+                    placeholder="year"
+                    {...register('year', {
+                      required: 'You need to fill in this field',
+                      pattern: {
+                        value: /^[12]\d{3}$/,
+                        message: 'Please enter valid year 2... or 1...',
+                      },
+                    })}
+                  />
                   {errors.year?.message && (
                     <Error error={errors.year?.message} />
                   )}
@@ -260,7 +318,11 @@ function Dashboard() {
                 </motion.button>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className={styles.form__submit}
+                  className={
+                    isValid
+                      ? styles.form__submit
+                      : styles.form__submit + ' ' + styles.desabled
+                  }
                 >
                   <input type={'submit'} value="Create" />
                 </motion.div>

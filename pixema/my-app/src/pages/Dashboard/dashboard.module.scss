@@ -47,7 +47,6 @@
     font-family: $font_family;
   }
   .form__inputs {
-    display: flex;
     input {
       padding: 16px 20px;
       border: 2px solid $_light-grey;
@@ -55,10 +54,10 @@
     }
   }
   .description {
-    display: flex;
     margin-bottom: 15px;
-    height: 120px;
     textarea {
+      height: 120px;
+      display: block;
       resize: none;
       overflow: hidden;
       background: $_white;
@@ -134,6 +133,9 @@
     }
   }
   .form__submit {
+    &.desabled {
+      opacity: 0.5;
+    }
     width: 300px;
     @media (max-width: 400px) {
       width: 100%;
@@ -155,11 +157,6 @@
     font-size: $s_title_second;
     margin-bottom: 20px;
   }
-}
-.successMessage {
-  color: $_green;
-  font-size: $s_title_second;
-  font-weight: 600;
 }
 .active {
   h2 {
