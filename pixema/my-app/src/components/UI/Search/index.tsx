@@ -27,8 +27,12 @@ const Search: React.FC<ISearchProps> = ({ fetchWithDebounce }) => {
     setSearchInput(search)
   }, [search])
 
+  const isTheme = useAppSelector((state) => state.themeReducer.isTheme)
+
   return (
-    <div className={styles.search}>
+    <div
+      className={isTheme ? styles.search + ' ' + styles.active : styles.search}
+    >
       <input
         type="text"
         value={searchInput}

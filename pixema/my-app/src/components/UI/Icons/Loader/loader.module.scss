@@ -84,26 +84,30 @@
 .blink {
   -webkit-animation: blink 3s linear infinite;
   animation: blink 3s linear infinite;
+  color: $_black;
+  &.active {
+    color: $_white;
+  }
 }
 @-webkit-keyframes blink {
   0% {
-    color: rgba(0, 0, 0, 1);
+    opacity: 1;
   }
   50% {
-    color: rgba(0, 0, 0, 0);
+    opacity: 0;
   }
   100% {
-    color: rgba(0, 0, 0, 1);
+    opacity: 1;
   }
 }
 @keyframes blink {
   0% {
-    color: rgba(0, 0, 0, 1);
+    opacity: 1;
   }
   50% {
-    color: rgba(0, 0, 0, 0);
+    opacity: 0;
   }
   100% {
-    color: rgba(0, 0, 0, 1);
+    opacity: 1;
   }
 }
