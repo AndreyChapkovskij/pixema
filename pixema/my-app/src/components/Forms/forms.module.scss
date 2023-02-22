@@ -13,6 +13,9 @@
     width: auto;
   }
   padding: 40px;
+  @media (max-width: 320px) {
+    padding: 30px;
+  }
   background: $_white;
   border-radius: 10px;
   color: $_light-black;
