@@ -92,3 +92,18 @@
     }
   }
 }
+
+.search.active {
+  .dropdown {
+    & > li {
+      background: $_black;
+      color: $_white;
+    }
+  }
+  background: $_dim-grey;
+  border: none;
+  input {
+    background: $_dim-grey;
+    color: $_white;
+  }
+}

@@ -46,8 +46,10 @@ const Settings: React.FC = () => {
 
   useEffect(() => {
     if (errMessage || successMessage) {
+      successMessage && dispatch(fetchUserData(accessToken))
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
+
     return () => {
       successMessage && dispatch(changeSuccessMessage(''))
       errMessage && dispatch(changeErrorMessage(''))
@@ -58,7 +60,6 @@ const Settings: React.FC = () => {
     register,
     handleSubmit,
     setValue,
-    reset,
     setError,
     formState: { errors, isValid },
   } = useForm<ISettingsFormData>({ mode: 'onChange' })
@@ -80,9 +81,11 @@ const Settings: React.FC = () => {
             accessToken,
           })
         )
-        reset()
+        setValue('confirmPassword', '')
+        setValue('newPassword', '')
       } else {
-        reset()
+        setValue('confirmPassword', '')
+        setValue('newPassword', '')
         setError('confirmPassword', { message: "Passwords don't match" })
         setError('newPassword', { message: "Passwords don't match" })
       }
@@ -95,8 +98,6 @@ const Settings: React.FC = () => {
           accessToken,
         })
       )
-      dispatch(fetchUserData(accessToken))
-      reset()
     }
   })
 
