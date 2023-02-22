@@ -94,6 +94,12 @@
 }
 
 .search.active {
+  .dropdown {
+    & > li {
+      background: $_black;
+      color: $_white;
+    }
+  }
   background: $_dim-grey;
   border: none;
   input {
