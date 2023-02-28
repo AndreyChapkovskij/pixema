@@ -19,7 +19,7 @@ export const getQueryString = (
   filter.groupByRating[0] &&
     queryString.push(`groupByRating=${filter.groupByRating.join(',')}`)
 
-  search && queryString.push(`search=${search}`)
+  search && queryString.push(`search=${search.trim()}`)
   favoriteItemsId?.length &&
     queryString.push(`favoritersId=${favoriteItemsId.join(',')}`)
 

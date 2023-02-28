@@ -60,6 +60,10 @@ body {
 }
 .error {
   color: $_red;
+  position: absolute;
+  @media (max-width: 320px) {
+    font-size: 0.8rem;
+  }
 }
 .success {
   color: $_green;

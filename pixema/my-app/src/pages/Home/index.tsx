@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 
 import { fetchMovies } from '../../redux/moviesSlice'
+
+import { changeSearch } from '../../redux/searchSlice'
 
 import MoviesList from '../../components/MoviesList'
 import Sidebar from '../../components/Sidebar'
@@ -10,7 +12,11 @@ import Header from '../../components/Header'
 import Helmet from '../../components/Helmet'
 import Footer from '../../components/Footer'
 
+import qs from 'qs'
+import { createBrowserHistory } from '@remix-run/router'
+
 const Home: React.FC = () => {
+  const history = createBrowserHistory()
   const dispatch = useAppDispatch()
 
   const [currentPage, setCurrentPage] = useState(1)
@@ -19,7 +25,19 @@ const Home: React.FC = () => {
   const filter = useAppSelector((state) => state.filterReducer.filter)
 
   useEffect(() => {
+    const filterParams = history.location.search.substr(1)
+    const filtersFromParams = qs.parse(filterParams)
+    if (
+      typeof filtersFromParams.search === 'string' &&
+      filtersFromParams.search
+    ) {
+      dispatch(changeSearch(filtersFromParams.search))
+    }
+  }, [])
+
+  useEffect(() => {
     dispatch(fetchMovies({ filter, currentPage, search }))
+    search && history.push(`?search=${search}`)
   }, [filter, currentPage, search])
 
   return (
