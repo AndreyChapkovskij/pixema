@@ -19,9 +19,8 @@ export const fetchSearch = createAsyncThunk<
 >('search/searchItems', async (search, thunkAPI) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/search?search=${search}`
+      `http://localhost:5000/api/search?search=${search.trim()}`
     )
-
     if (!response.ok) {
       throw new Error('Server Error')
     }

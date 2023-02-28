@@ -44,7 +44,13 @@ const Search: React.FC<ISearchProps> = ({ fetchWithDebounce }) => {
       {searchItems[0] && searchInput && (
         <ul className={styles.dropdown}>
           {searchItems.map((movie) => (
-            <li key={movie.id} onClick={() => navigate(`/movie/${movie.id}`)}>
+            <li
+              key={movie.id}
+              onClick={() => {
+                navigate(`/movie/${movie.id}`)
+                dispatch(clearSearchItems())
+              }}
+            >
               <div>
                 <img
                   src={'http://localhost:5000/' + movie.img}
